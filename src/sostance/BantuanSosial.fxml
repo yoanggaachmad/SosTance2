@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="604.0" prefWidth="998.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.FXMLDocumentController">
+    <children>
+      <AnchorPane prefHeight="70.0" prefWidth="1018.0" style="-fx-background-color: #6FCCE0;">
+         <children>
+            <Button layoutX="895.0" layoutY="17.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="46.0" style="-fx-background-color: #6FCCE0;" />
+              <Label fx:id="label" layoutX="23.0" layoutY="13.0" minHeight="16" minWidth="69" prefHeight="46.0" prefWidth="208.0" text="SosTance">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="49.0" layoutX="899.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/settings.png" />
+               </image>
+            </ImageView>
+            <Line endX="-100.00003051757812" endY="49.20001220703125" layoutX="1045.0" layoutY="12.0" startX="-100.0" />
+            <Button layoutX="946.0" layoutY="17.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="46.0" style="-fx-background-color: #6FCCE0;" />
+            <ImageView fitHeight="39.0" fitWidth="49.0" layoutX="950.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Downloads/information.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="70.0" prefHeight="532.0" prefWidth="218.0" style="-fx-background-color: #d9d9d9;">
+         <children>
+            <ImageView fitHeight="79.0" fitWidth="79.0" layoutX="5.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../gambar/programmer.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="99.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alek" wrappingWidth="66.13672637939453">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <Text layoutX="99.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masyarakat" wrappingWidth="79.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="99.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Belum Terverifikasi" wrappingWidth="91.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="-1.0" layoutY="124.0" prefHeight="55.0" prefWidth="219.0" style="-fx-background-color: #6FCCE0;">
+               <children>
+                  <Text layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" wrappingWidth="79.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="20.0" fitWidth="25.0" layoutX="195.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/menu.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="48.0" layoutY="152.0" prefHeight="382.0" prefWidth="168.0" style="-fx-background-color: #d9d9d9;">
+               <children>
+                  <Button layoutX="20.0" layoutY="355.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="32.0" />
+                  <Button layoutY="104.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" />
+                  <Button layoutY="60.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" />
+                  <Button layoutY="14.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" />
+                  <ImageView fitHeight="39.0" fitWidth="46.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/dashboard%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="44.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="79.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="4.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/social-care.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="4.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/contact-form.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="44.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengisian Formulir" wrappingWidth="116.60000610351562">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="44.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengajuan Bantuan Sosial" wrappingWidth="116.60000610351562">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Button layoutY="151.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" />
+                  <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="4.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/save-money.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="44.0" layoutY="167.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pengajuan Bantuan Modal Usaha" wrappingWidth="116.60000610351562">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Button layoutY="198.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" />
+                  <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="4.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/to-do-list.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="44.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Kebutuhan Subsidi" wrappingWidth="116.60000610351562">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <Button layoutY="244.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="168.0" />
+                  <ImageView fitHeight="32.0" fitWidth="39.0" layoutX="4.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/customer.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="44.0" layoutY="260.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Penyediaan Modal Tempat Usaha" wrappingWidth="116.60000610351562">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="26.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/exit.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="107.0" layoutY="355.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="32.0" />
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="113.0" layoutY="358.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../gambar/power-off.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Group layoutX="773.0" layoutY="108.0" />
+      <ImageView fitHeight="534.0" fitWidth="1041.0" layoutX="218.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../gambar/GoSend-Distribusi-Bantuan-Sosial-2-scaled.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="413.0" layoutY="123.0" prefHeight="446.0" prefWidth="409.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Text layoutX="78.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Lengkap  :" wrappingWidth="98.93670654296875" />
+            <TextField layoutX="177.0" layoutY="25.0" />
+            <Text layoutX="46.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="*Dengan klik tanda di samping berarti anda menyetujui semua persyaratan dan memastikan data sudah benar dan bisa dipertanggungjawabkan apabila terjadi kesalahan." wrappingWidth="316.5367431640625">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Text>
+            <RadioButton layoutX="177.0" layoutY="61.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="79.0" text="Laki-laki" />
+            <RadioButton layoutX="177.0" layoutY="85.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="91.0" text="Perempuan" />
+            <Text layoutX="78.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Agama               :" wrappingWidth="98.93670654296875" />
+            <ChoiceBox layoutX="176.0" layoutY="108.0" prefWidth="150.0" />
+            <Text layoutX="78.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pekerjaan           :" wrappingWidth="98.93670654296875" />
+            <TextField layoutX="176.0" layoutY="140.0" />
+            <Text layoutX="78.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Alamat               :" wrappingWidth="98.93670654296875" />
+            <TextField layoutX="175.0" layoutY="219.0" prefHeight="25.0" prefWidth="150.0" />
+            <Text layoutX="76.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pendapatan        :" wrappingWidth="98.93670654296875" />
+            <TextField layoutX="176.0" layoutY="183.0" prefHeight="25.0" prefWidth="150.0" />
+            <Text layoutX="78.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kebutuhan         :" wrappingWidth="98.93670654296875" />
+            <TextField layoutX="175.0" layoutY="257.0" prefHeight="25.0" prefWidth="150.0" />
+            <Text layoutX="88.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Kelamin     :" wrappingWidth="98.93670654296875" />
+            <RadioButton layoutX="27.0" layoutY="313.0" mnemonicParsing="false" />
+            <Button layoutX="181.0" layoutY="381.0" mnemonicParsing="false" text="Kirim Data" />
+         </children>
+      </Pane>
+      <Label fx:id="label1" layoutX="514.0" layoutY="77.0" minHeight="16" minWidth="69" prefHeight="46.0" prefWidth="208.0" text="Bantuan Sosial">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
