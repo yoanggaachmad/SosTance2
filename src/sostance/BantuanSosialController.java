@@ -16,9 +16,7 @@ import javafx.fxml.Initializable;
  */
 public class BantuanSosialController implements Initializable {
 
-    private void form(ActionEvent event) {
-       
-    }
+    
     
     private void bansos(ActionEvent event) {
        
