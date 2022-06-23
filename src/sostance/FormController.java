@@ -26,7 +26,7 @@ public class FormController implements Initializable {
     
     @FXML
     private void dashboard(ActionEvent event) {
-       
+        System.out.println("kldfljdf");
     }
     
     private void form(ActionEvent event) {
