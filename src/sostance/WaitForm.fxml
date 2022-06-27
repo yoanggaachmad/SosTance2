@@ -41,8 +41,9 @@
                <children>
                   <TableView layoutX="87.0" layoutY="31.0" prefHeight="230.0" prefWidth="583.0">
                     <columns>
-                      <TableColumn prefWidth="346.4000244140625" text="Kebutuhan" />
-                        <TableColumn minWidth="0.0" prefWidth="235.0" text="Aksi" />
+                      <TableColumn prefWidth="51.99993896484375" text="No" />
+                        <TableColumn minWidth="0.0" prefWidth="295.1999206542969" text="Kebutuhan" />
+                        <TableColumn prefWidth="232.7999267578125" text="Aksi" />
                     </columns>
                   </TableView>
                   <Button layoutX="607.0" layoutY="272.0" mnemonicParsing="false" text="Selanjutnya" />
@@ -58,10 +59,12 @@
       </Pane>
       <Pane layoutX="800.0" layoutY="120.0" prefHeight="108.0" prefWidth="195.0" style="-fx-border-color: #000;">
          <children>
-            <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kebutuhan : " wrappingWidth="91.0" />
-            <TextField layoutX="89.0" layoutY="25.0" prefHeight="25.0" prefWidth="91.0" />
+            <Text layoutX="14.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kebutuhan : " wrappingWidth="91.0" />
+            <TextField layoutX="89.0" layoutY="34.0" prefHeight="16.0" prefWidth="91.0" />
             <Button layoutX="41.0" layoutY="69.0" mnemonicParsing="false" text="Edit" />
             <Button layoutX="116.0" layoutY="69.0" mnemonicParsing="false" text="Delete" />
+            <Text layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="No             :" wrappingWidth="91.0" />
+            <TextField layoutX="89.0" layoutY="2.0" prefHeight="16.0" prefWidth="91.0" />
          </children>
       </Pane>
       <Group layoutX="773.0" layoutY="108.0" />

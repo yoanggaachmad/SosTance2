@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="602.0" prefWidth="915.0">
          <left>
@@ -316,12 +316,12 @@
                         </Button>
                      </children>
                   </HBox>
-                  <Label prefHeight="47.0" prefWidth="186.0" text="Terima kasih" underline="true">
+                  <Label prefHeight="47.0" prefWidth="246.0" text="Selamat Datang!" underline="true">
                      <font>
                         <Font size="32.0" />
                      </font>
                      <VBox.margin>
-                        <Insets left="250.0" />
+                        <Insets left="200.0" />
                      </VBox.margin>
                   </Label>
                   <HBox prefHeight="515.0" prefWidth="714.0">

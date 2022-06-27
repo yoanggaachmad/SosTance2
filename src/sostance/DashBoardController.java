@@ -30,7 +30,7 @@ public class DashBoardController implements Initializable {
     
     @FXML
     private void PengisianButtonAction(ActionEvent event) {
-       OpenScene object = new OpenScene();
+        OpenScene object = new OpenScene();
         Pane halaman = object.getPane("Form");
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
@@ -38,12 +38,18 @@ public class DashBoardController implements Initializable {
     
     @FXML
     private void BansosButtonAction(ActionEvent event) {
-       
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("BantuanSosial");
+        mainPane.setCenter(halaman);
+        mainPane.requestFocus();
     }
     
     @FXML
     private void modalButtonAction(ActionEvent event) {
-       
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("ModalTempatUsaha");
+        mainPane.setCenter(halaman);
+        mainPane.requestFocus();
     }
     
     @FXML
