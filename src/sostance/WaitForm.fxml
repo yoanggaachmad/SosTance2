@@ -31,9 +31,9 @@
          <children>
             <Text layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List Kebutuhanmu !" wrappingWidth="131.79998779296864" />
             <Text layoutX="14.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kebutuhan : " wrappingWidth="91.0" />
-            <TextField layoutX="89.0" layoutY="25.0" prefHeight="25.0" prefWidth="79.0" />
+            <TextField fx:id="tfKebutuhan" layoutX="89.0" layoutY="25.0" prefHeight="25.0" prefWidth="79.0" />
             <Button layoutX="168.0" layoutY="77.0" mnemonicParsing="false" onAction="#buttonTambah" prefHeight="25.0" prefWidth="59.0" text="Tambah" />
-            <TextField layoutX="89.0" layoutY="54.0" prefHeight="25.0" prefWidth="79.0" />
+            <TextField fx:id="tfAksi" layoutX="89.0" layoutY="54.0" prefHeight="25.0" prefWidth="79.0" />
             <Text layoutX="14.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Aksi            : " wrappingWidth="91.0" />
          </children>
       </Pane>
@@ -41,11 +41,11 @@
          <children>
             <Pane layoutX="14.0" layoutY="14.0" prefHeight="312.0" prefWidth="731.0" style="-fx-border-color: #000;">
                <children>
-                  <TableView layoutX="87.0" layoutY="31.0" prefHeight="230.0" prefWidth="583.0">
+                  <TableView fx:id="tvKebutuhan" layoutX="87.0" layoutY="31.0" prefHeight="230.0" prefWidth="583.0">
                     <columns>
                       <TableColumn prefWidth="51.99993896484375" text="No" />
-                        <TableColumn minWidth="0.0" prefWidth="295.1999206542969" text="Kebutuhan" />
-                        <TableColumn prefWidth="232.7999267578125" text="Aksi" />
+                        <TableColumn fx:id="tcKebutuhan" minWidth="0.0" prefWidth="295.1999206542969" text="Kebutuhan" />
+                        <TableColumn fx:id="tcAksi" prefWidth="232.7999267578125" text="Aksi" />
                     </columns>
                   </TableView>
                   <Button layoutX="607.0" layoutY="272.0" mnemonicParsing="false" text="Selanjutnya" />
