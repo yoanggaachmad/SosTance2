@@ -30,7 +30,7 @@
             </Label>
             <Label layoutX="20.0" layoutY="80.0" text="Cek Pengambilan Subsidi Terdekat :" textFill="WHITE" />
             <TextField layoutX="20.0" layoutY="105.0" prefHeight="26.0" prefWidth="208.0" />
-            <PieChart layoutX="409.0" layoutY="141.0" prefHeight="284.0" prefWidth="441.0" />
+            <PieChart fx:id="pcSubsidiKebutuhan" layoutX="409.0" layoutY="141.0" prefHeight="284.0" prefWidth="441.0" />
             <TableView fx:id="tvlistKebutuhanSubsidi" layoutX="20.0" layoutY="141.0" prefHeight="275.0" prefWidth="354.0">
               <columns>
                 <TableColumn fx:id="tcnomor" prefWidth="25.5999755859375" text="No" />

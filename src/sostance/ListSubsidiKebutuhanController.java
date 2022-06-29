@@ -6,9 +6,12 @@ package sostance;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
@@ -20,6 +23,12 @@ import javafx.scene.control.cell.PropertyValueFactory;
  * @author arulh
  */
 public class ListSubsidiKebutuhanController implements Initializable {
+//    ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
+        ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
+
+    @FXML
+    private PieChart pcSubsidiKebutuhan;
+    
     @FXML
     private Button dashboard;
     
@@ -69,7 +78,7 @@ public class ListSubsidiKebutuhanController implements Initializable {
     @FXML
     private TableView<SubsidiKebutuhan> tvlistKebutuhanSubsidi;
     
-    SubsidiKebutuhanList data;
+    SubsidiKebutuhanList data1;
     
     
     
@@ -77,11 +86,26 @@ public class ListSubsidiKebutuhanController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
+//        data.add(new PieChart.Data)("HatckBack", 40));
+data.add(new PieChart.Data("2010",2880));
+        data.add(new PieChart.Data("2011",3230));
+        data.add(new PieChart.Data("2012",3580));
+        data.add(new PieChart.Data("2013",3850));
+        data.add(new PieChart.Data("2014",4250));
         
+                pcSubsidiKebutuhan.setData(data);
+
+        
+        System.out.println("TambahButton is Clicked");
     }
-    
+//    @FXML
+//    private void handleKurangAction(ActionEvent){
+//        data.remove(3);
+//        System.out.println("KurangButton is Clicked");
+//    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        data.add(new PieChart.Data("Sedan", 50));
         // TODO
 
         tcnomor.setCellValueFactory(new PropertyValueFactory<>("nomor"));
@@ -90,9 +114,9 @@ public class ListSubsidiKebutuhanController implements Initializable {
 
         tcalamat.setCellValueFactory(new PropertyValueFactory<>("alamat"));
         
-        data = new SubsidiKebutuhanList();
-        data.setDummy();
-        tvlistKebutuhanSubsidi.setItems(data.getListData());
+        data1 = new SubsidiKebutuhanList();
+        data1.setDummy();
+        tvlistKebutuhanSubsidi.setItems(data1.getListData());
     }
 
 }
