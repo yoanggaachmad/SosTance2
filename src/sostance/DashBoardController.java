@@ -44,10 +44,19 @@ public class DashBoardController implements Initializable {
         mainPane.requestFocus();
     }
     
+    
     @FXML
     private void modalButtonAction(ActionEvent event) {
         OpenScene object = new OpenScene();
         Pane halaman = object.getPane("ModalTempatUsaha");
+        mainPane.setCenter(halaman);
+        mainPane.requestFocus();
+    }
+    
+    @FXML
+    private void SubsidiKebutuhan(ActionEvent event) {
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("ListSubsidiKebutuhan");
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
     }

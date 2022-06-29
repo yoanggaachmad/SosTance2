@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="602.0" prefWidth="915.0">
          <left>
@@ -171,7 +171,7 @@
                            </children>
                         </HBox>
                      </graphic></Button>
-                  <Button mnemonicParsing="false" onAction="#ListButtonAction" prefHeight="39.0" prefWidth="168.0">
+                  <Button mnemonicParsing="false" onAction="#SubsidiKebutuhan" prefHeight="39.0" prefWidth="168.0">
                      <VBox.margin>
                         <Insets left="40.0" top="8.0" />
                      </VBox.margin>
@@ -356,7 +356,7 @@
                                     </VBox>
                                  </graphic>
                               </Button>
-                              <Button alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#DashboardListAction" prefHeight="150.0" prefWidth="178.0" style="-fx-background-color: #353641;" textFill="WHITE">
+                              <Button alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#SubsidiKebutuhan" prefHeight="150.0" prefWidth="178.0" style="-fx-background-color: #353641;" textFill="WHITE">
                                  <VBox.margin>
                                     <Insets left="60.0" top="40.0" />
                                  </VBox.margin>
