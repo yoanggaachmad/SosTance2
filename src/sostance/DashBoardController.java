@@ -31,7 +31,7 @@ public class DashBoardController implements Initializable {
     @FXML
     private void PengisianButtonAction(ActionEvent event) {
         OpenScene object = new OpenScene();
-        Pane halaman = object.getPane("Form");
+        Pane halaman = object.getPane("WaitForm");
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
     }
