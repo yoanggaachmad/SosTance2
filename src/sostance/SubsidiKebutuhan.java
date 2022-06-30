@@ -21,7 +21,11 @@ public class SubsidiKebutuhan {
         this("", "", "", "");
     }
     public SubsidiKebutuhan(String nomor, String namaBahan, String stok, String alamatPengambilan){
-        
+        this.nomor = new SimpleStringProperty(nomor);
+        this.namaBahan = new SimpleStringProperty(namaBahan);
+        this.stok = new SimpleStringProperty(stok);
+        this.alamatPengambilan = new SimpleStringProperty(alamatPengambilan);
+
     }
 
     public String getNomor() {
