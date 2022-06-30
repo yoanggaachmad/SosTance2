@@ -79,7 +79,12 @@
                      </font>
                   </Text>
                   <TextField fx:id="tfAlamat" layoutX="149.0" layoutY="141.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="150.0" />
-                  <Button fx:id="btSimpan" layoutX="557.0" layoutY="386.0" mnemonicParsing="false" style="-fx-background-color: #6FCCE0;" text="Simpan" textFill="WHITE">
+                  <Button fx:id="btSimpan" layoutX="14.0" layoutY="386.0" mnemonicParsing="false" onAction="#ButtonSimpan" style="-fx-background-color: #6FCCE0;" text="Simpan" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btTampilkanData" layoutX="510.0" layoutY="386.0" mnemonicParsing="false" onAction="#ButtonTampilkanData" style="-fx-background-color: #6FCCE0;" text="Tampilkan Data" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
