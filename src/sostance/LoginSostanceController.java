@@ -50,18 +50,13 @@ public class LoginSostanceController implements Initializable {
                 System.out.println("Login Berhasil");
                 
                 OpenScene object = new OpenScene();
-        Pane halaman = object.getPane("DashBoard");
-        mainPane.setCenter(halaman);
-        mainPane.requestFocus();
+                Pane halaman = object.getPane("DashBoard");
+                mainPane.setCenter(halaman);
+                mainPane.requestFocus();
             }else{
                 System.out.println("Username/Password salah");
             }
         }
-        
-//        OpenScene object = new OpenScene();
-//        Pane halaman = object.getPane("DashBoard");
-//        mainPane.setCenter(halaman);
-//        mainPane.requestFocus();
     }
 
     @Override
