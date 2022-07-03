@@ -20,12 +20,15 @@ import javafx.scene.layout.Pane;
  */
 public class DashBoardController implements Initializable {
     
-    @FXML
-    BorderPane mainPane;
+   @FXML
+   BorderPane mainPane;
     
    @FXML
     private void DashboardButtonAction(ActionEvent event) {
-       
+       OpenScene object = new OpenScene();
+       Pane halaman = object.getPane("DashBoard");
+       mainPane.setCenter(halaman);
+       mainPane.requestFocus();
     }
     
     @FXML

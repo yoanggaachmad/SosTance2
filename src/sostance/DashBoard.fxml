@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="602.0" prefWidth="915.0">
          <left>
@@ -61,7 +61,7 @@
                               </HBox>
                            </graphic>
                         </Button>
-                        <Button layoutX="16.0" layoutY="257.0" mnemonicParsing="false" onAction="#modalButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Pengajuan Bantuan Modal Usaha" wrapText="true">
+                        <Button layoutX="16.0" layoutY="257.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Pengajuan Bantuan Modal Usaha" wrapText="true">
                            <font>
                               <Font size="11.0" />
                            </font>
@@ -90,7 +90,7 @@
                               </HBox>
                            </graphic>
                         </Button>
-                        <Button layoutX="16.0" layoutY="399.0" mnemonicParsing="false" onAction="#penyediaanButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Penyediaan Modal Tempat Usaha" wrapText="true">
+                        <Button layoutX="16.0" layoutY="399.0" mnemonicParsing="false" onAction="#modalButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Penyediaan Modal Tempat Usaha" wrapText="true">
                            <graphic>
                               <HBox prefHeight="22.0" prefWidth="22.0">
                                  <children>

@@ -4,6 +4,7 @@
  */
 package sostance;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -11,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -30,7 +32,7 @@ public class LoginSostanceController implements Initializable {
     private TextField tfUsername;
 
     @FXML
-    private TextField tfPassword;
+    private PasswordField pfPassword;
 
     @FXML
     private Button btMasuk;
@@ -38,12 +40,28 @@ public class LoginSostanceController implements Initializable {
     @FXML
     private ImageView ivBackground;
 
+    
     @FXML
-    private void handleActionMasuk(ActionEvent event) {
-        OpenScene object = new OpenScene();
+    private void handleActionMasuk(ActionEvent event) throws IOException{
+        if (event.getSource() == btMasuk) {
+            String username = tfUsername.getText();
+            String password = pfPassword.getText();
+            if (username.equalsIgnoreCase("user") && password.equalsIgnoreCase("user")) {
+                System.out.println("Login Berhasil");
+                
+                OpenScene object = new OpenScene();
         Pane halaman = object.getPane("DashBoard");
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
+            }else{
+                System.out.println("Username/Password salah");
+            }
+        }
+        
+//        OpenScene object = new OpenScene();
+//        Pane halaman = object.getPane("DashBoard");
+//        mainPane.setCenter(halaman);
+//        mainPane.requestFocus();
     }
 
     @Override
