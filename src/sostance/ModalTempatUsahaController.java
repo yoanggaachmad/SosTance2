@@ -6,6 +6,7 @@ package sostance;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
@@ -29,6 +30,8 @@ import javafx.stage.Stage;
  * @author ROG
  */
 public class ModalTempatUsahaController implements Initializable {
+    ArrayList<IsiTempatUsaha> simpanTempat = new ArrayList<>();
+    
     private String provinsi, kabupaten, kota, kecamatan, kelurahan, alamat, tipe;
     
     @FXML
@@ -94,6 +97,25 @@ public class ModalTempatUsahaController implements Initializable {
         stage.show();
     }
     
+    void bukaData() {
+        XStream xstream = new XStream(new StaxDriver());
+        FileInputStream berkasMasuk;
+        try {
+            berkasMasuk = new FileInputStream("ListTempatUsaha.xml");
+            int isi;
+            char c;
+            String s = "";
+            while ((isi = berkasMasuk.read()) != - 1) {
+                c = (char) isi;
+                s = s + c;
+            }
+            simpanTempat = (ArrayList<IsiTempatUsaha>) xstream.fromXML(s);
+            berkasMasuk.close();
+        } catch (Exception e) {
+            System.out.println("Terjadi kesalahan: " + e.getMessage());
+        }
+    }
+    
     @FXML
     private void ButtonSimpan(ActionEvent event) throws IOException {
     XStream xstream = new XStream(new StaxDriver());
@@ -121,8 +143,9 @@ public class ModalTempatUsahaController implements Initializable {
         tipe = tTipe;
         System.out.println(tipe);
         
-        listTempat.setData(provinsi, kabupaten, kota, kelurahan, kecamatan, alamat, tipe);
-        String xml = xstream.toXML(listTempat);
+        simpanTempat.add(new IsiTempatUsaha(provinsi, kabupaten, kota, kecamatan, kelurahan, alamat, tipe));
+        
+        String xml = xstream.toXML(simpanTempat);
         FileOutputStream outDoc;
         try{
             byte[]data = xml.getBytes("UTF-8");
@@ -137,7 +160,7 @@ public class ModalTempatUsahaController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        listTempat = new ListIsiTempatUsaha();
+        bukaData();
     }    
     
 }
