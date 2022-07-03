@@ -12,241 +12,117 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="602.0" prefWidth="915.0">
          <left>
             <VBox prefHeight="127.0" prefWidth="202.0" style="-fx-background-color: #d9d9d9;" BorderPane.alignment="CENTER">
                <children>
-                  <HBox prefHeight="105.0" prefWidth="202.0">
+                  <AnchorPane prefHeight="89.0" prefWidth="209.0">
                      <children>
-                        <ImageView fitHeight="91.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="94.0" fitWidth="95.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Gambar/freelance.png" />
+                              <Image url="@../Gambar/programmer.png" />
                            </image>
-                           <HBox.margin>
-                              <Insets left="5.0" />
-                           </HBox.margin>
                         </ImageView>
-                        <VBox prefHeight="100.0" prefWidth="122.0">
-                           <children>
-                              <Label prefHeight="15.0" prefWidth="53.0" text="Alex">
-                                 <VBox.margin>
-                                    <Insets left="5.0" top="15.0" />
-                                 </VBox.margin>
-                              </Label>
-                              <Label text="Masyarakat">
-                                 <VBox.margin>
-                                    <Insets left="5.0" />
-                                 </VBox.margin></Label>
-                              <Label prefHeight="24.0" prefWidth="106.0" text="Belum terverifikasi">
-                                 <VBox.margin>
-                                    <Insets left="5.0" />
-                                 </VBox.margin></Label>
-                           </children>
-                        </VBox>
+                        <Text layoutX="96.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masyarakat Indonesia" wrappingWidth="102.13671875">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="96.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Belum verifikasi" />
+                        <Text layoutX="96.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id apps:9103987" />
                      </children>
-                  </HBox>
-                  <Label prefHeight="29.0" prefWidth="210.0" style="-fx-background-color: #6FCCE0;">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets top="20.0" />
-                     </VBox.margin>
-                     <graphic>
-                        <HBox prefHeight="34.0" prefWidth="202.0">
+                  </AnchorPane>
+                  <AnchorPane prefHeight="490.0" prefWidth="210.0" stylesheets="@CSSOWW.css">
+                     <children>
+                        <Button layoutX="16.0" layoutY="115.0" mnemonicParsing="false" onAction="#PengisianButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="       Pengisian Formulir" />
+                        <Label layoutX="-1.0" prefHeight="34.0" prefWidth="210.0" style="-fx-background-color: #6FCCE0;">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="30.0" fitWidth="24.0" layoutX="172.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Gambar/menu%20(2).png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="16.0" layoutY="51.0" mnemonicParsing="false" onAction="#DashboardButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Dashboard     " textAlignment="CENTER" wrapText="true" />
+                        <Button layoutX="16.0" layoutY="184.0" mnemonicParsing="false" onAction="#BansosButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Pengajuan Bantuan Sosial" wrapText="true">
+                           <graphic>
+                              <HBox prefHeight="5.0" prefWidth="12.0">
+                                 <children>
+                                    <ImageView fitHeight="31.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Gambar/social-care%20(1).png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="16.0" layoutY="257.0" mnemonicParsing="false" onAction="#modalButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Pengajuan Bantuan Modal Usaha" wrapText="true">
+                           <font>
+                              <Font size="11.0" />
+                           </font>
+                           <graphic>
+                              <HBox prefHeight="38.0" prefWidth="20.0">
+                                 <children>
+                                    <ImageView fitHeight="73.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Gambar/save-money.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="16.0" layoutY="330.0" mnemonicParsing="false" onAction="#SubsidiKebutuhan" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="List Kebutuhan Bantuan Subsidi" wrapText="true">
+                           <graphic>
+                              <HBox prefHeight="22.0" prefWidth="22.0">
+                                 <children>
+                                    <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Gambar/to-do-list.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <Button layoutX="16.0" layoutY="399.0" mnemonicParsing="false" onAction="#penyediaanButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Penyediaan Modal Tempat Usaha" wrapText="true">
+                           <graphic>
+                              <HBox prefHeight="22.0" prefWidth="22.0">
+                                 <children>
+                                    <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../Gambar/customer.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </graphic>
+                        </Button>
+                        <HBox layoutX="28.0" layoutY="58.0" prefHeight="27.0" prefWidth="26.0">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" wrappingWidth="39.43280029296875">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Text>
-                              <ImageView fitHeight="25.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Gambar/menu.png" />
-                                 </image>
-                                 <HBox.margin>
-                                    <Insets left="133.0" top="2.0" />
-                                 </HBox.margin>
-                              </ImageView>
-                           </children>
-                        </HBox>
-                     </graphic>
-                  </Label>
-                  <Label prefHeight="26.0" prefWidth="41.0" style="-fx-background-color: #6FCCE0;" />
-                  <Button mnemonicParsing="false" onAction="#DashboardButtonAction" prefHeight="39.0" prefWidth="168.0" style="-fx-background-color: #6FCCE0;">
-                     <VBox.margin>
-                        <Insets left="40.0" />
-                     </VBox.margin>
-                     <graphic>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="31.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../Gambar/gauge.png" />
                                  </image>
                               </ImageView>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard">
-                                 <HBox.margin>
-                                    <Insets left="5.0" top="7.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="11.0" />
-                                 </font>
-                              </Text>
                            </children>
                         </HBox>
-                     </graphic>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#PengisianButtonAction" prefHeight="39.0" prefWidth="168.0">
-                     <VBox.margin>
-                        <Insets left="40.0" top="8.0" />
-                     </VBox.margin>
-                     <graphic>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox layoutX="28.0" layoutY="123.0" prefHeight="31.0" prefWidth="22.0">
                            <children>
-                              <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="31.0" fitWidth="77.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../Gambar/notes.png" />
                                  </image>
                               </ImageView>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pengisian Formulir">
-                                 <HBox.margin>
-                                    <Insets left="5.0" top="7.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="11.0" />
-                                 </font>
-                              </Text>
                            </children>
                         </HBox>
-                     </graphic></Button>
-                  <Button mnemonicParsing="false" onAction="#BansosButtonAction" prefHeight="39.0" prefWidth="168.0">
-                     <VBox.margin>
-                        <Insets left="40.0" top="8.0" />
-                     </VBox.margin>
-                     <graphic>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Gambar/social-care%20(1).png" />
-                                 </image>
-                              </ImageView>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pengajuan Bantuan Sosial" wrappingWidth="116.60000610351562">
-                                 <HBox.margin>
-                                    <Insets left="5.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="11.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </HBox>
-                     </graphic></Button>
-                  <Button mnemonicParsing="false" onAction="#modalButtonAction" prefHeight="40.0" prefWidth="162.0" textAlignment="CENTER" wrapText="true">
-                     <VBox.margin>
-                        <Insets left="40.0" top="8.0" />
-                     </VBox.margin>
-                     <font>
-                        <Font size="11.0" />
-                     </font>
-                     <graphic>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Gambar/save-money.png" />
-                                 </image>
-                              </ImageView>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pengajuan Bantuan Modal Usaha" wrappingWidth="116.60000610351562">
-                                 <HBox.margin>
-                                    <Insets left="5.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="11.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </HBox>
-                     </graphic></Button>
-                  <Button mnemonicParsing="false" onAction="#SubsidiKebutuhan" prefHeight="39.0" prefWidth="168.0">
-                     <VBox.margin>
-                        <Insets left="40.0" top="8.0" />
-                     </VBox.margin>
-                     <graphic>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Gambar/to-do-list.png" />
-                                 </image>
-                              </ImageView>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="List Kebutuhan Subsidi" wrappingWidth="116.60000610351562">
-                                 <HBox.margin>
-                                    <Insets left="5.0" top="7.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="11.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </HBox>
-                     </graphic>
-                  </Button>
-                  <Button mnemonicParsing="false" onAction="#penyediaanButtonAction" prefHeight="39.0" prefWidth="168.0">
-                     <VBox.margin>
-                        <Insets left="40.0" top="8.0" />
-                     </VBox.margin>
-                     <graphic>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Gambar/customer.png" />
-                                 </image>
-                              </ImageView>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Penyediaan Modal Tempat Usaha" wrappingWidth="116.60000610351562">
-                                 <HBox.margin>
-                                    <Insets left="5.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="11.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </HBox>
-                     </graphic>
-                  </Button>
-                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="103.0" prefWidth="200.0">
-                     <children>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
-                           <HBox.margin>
-                              <Insets left="65.0" top="75.0" />
-                           </HBox.margin>
-                           <graphic>
-                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Gambar/exit.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0">
-                           <HBox.margin>
-                              <Insets left="55.0" top="75.0" />
-                           </HBox.margin>
-                           <graphic>
-                              <ImageView fitHeight="15.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../Gambar/power-off.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
                      </children>
-                  </HBox>
+                  </AnchorPane>
                </children>
             </VBox>
          </left>
@@ -260,7 +136,7 @@
                      <children>
                         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SosTance">
                            <font>
-                              <Font size="30.0" />
+                              <Font name="Lucida Sans Unicode" size="30.0" />
                            </font>
                         </Text>
                         <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="39.0" prefWidth="62.0" style="-fx-background-color: #6FCCE0;">

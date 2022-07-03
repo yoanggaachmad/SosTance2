@@ -10,40 +10,44 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.ListSubsidiKebutuhanController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.ListSubsidiKebutuhanController">
     <children>
-      <ImageView fitHeight="604.0" fitWidth="1027.0" pickOnBounds="true">
-         <image>
-            <Image url="@../Gambar/sembako-murah-1024x768.jpg" />
-         </image>
-      </ImageView>
-      <AnchorPane fx:id="tbsubsidiKebutuhan" prefHeight="535.0" prefWidth="817.0">
-         <children>
-            <Label layoutX="26.0" layoutY="426.0" text="Ditampilkan 3 dari 3" textFill="WHITE" />
-            <Label layoutX="26.0" layoutY="463.0" text="bantuan sosial" textFill="WHITE" />
-            <Label layoutX="26.0" layoutY="445.0" text="*Pencet tanda aksi untuk menambahkan ke pengajuan" textFill="WHITE" />
-            <Label layoutX="161.0" prefHeight="54.0" prefWidth="382.0" style="-fx-font-style: S;" text="List Kebutuhan Subsidi" textFill="WHITE">
-               <font>
-                  <Font size="37.0" />
-               </font>
-            </Label>
-            <Label layoutX="20.0" layoutY="80.0" text="Cek Pengambilan Subsidi Terdekat :" textFill="WHITE" />
-            <PieChart fx:id="pcSubsidiKebutuhan" layoutX="401.0" layoutY="137.0" prefHeight="284.0" prefWidth="355.0" />
-            <TableView fx:id="tvlistKebutuhanSubsidi" layoutX="20.0" layoutY="141.0" prefHeight="275.0" prefWidth="355.0">
-              <columns>
-                <TableColumn fx:id="tcnomor" prefWidth="25.5999755859375" text="No" />
-                <TableColumn fx:id="tcnamaBahan" prefWidth="215.20002365112305" text="Nama Bahan" />
-                  <TableColumn fx:id="tcstok" prefWidth="113.5999755859375" text="Stok" />
-              </columns>
-            </TableView>
-            <ChoiceBox fx:id="cbalamat" layoutX="20.0" layoutY="98.0" prefHeight="26.0" prefWidth="207.0" />
-            <Label layoutX="501.0" layoutY="184.0" text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" />
-         </children>
-      </AnchorPane>
-      <TextField layoutX="820.0" layoutY="532.0" prefHeight="39.0" prefWidth="26.0" text="1" />
-      <Button fx:id="selanjutnya" layoutX="858.0" layoutY="548.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" text="Selanjutnya" />
-      <Button fx:id="kembali" layoutX="741.0" layoutY="548.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" text="Kembali" />
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <AnchorPane fx:id="tbsubsidiKebutuhan" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0" prefWidth="706.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="598.0" fitWidth="712.0" layoutY="1.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../Gambar/sembako-murah-1024x768.jpg" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="26.0" layoutY="426.0" text="Ditampilkan 3 dari 3" textFill="WHITE" />
+                  <Label layoutX="26.0" layoutY="463.0" text="bantuan sosial" textFill="WHITE" />
+                  <Label layoutX="26.0" layoutY="445.0" text="*Pencet tanda aksi untuk menambahkan ke pengajuan" textFill="WHITE" />
+                  <Label layoutX="161.0" layoutY="17.0" prefHeight="52.0" prefWidth="380.0" style="-fx-font-style: S;" text="List Kebutuhan Subsidi" textFill="WHITE">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="20.0" layoutY="80.0" text="Cek Pengambilan Subsidi Terdekat :" textFill="WHITE" />
+                  <PieChart fx:id="pcSubsidiKebutuhan" layoutX="399.0" layoutY="153.0" prefHeight="251.0" prefWidth="265.0" />
+                  <TableView fx:id="tvlistKebutuhanSubsidi" layoutX="20.0" layoutY="141.0" prefHeight="275.0" prefWidth="355.0">
+                    <columns>
+                      <TableColumn fx:id="tcnomor" prefWidth="25.5999755859375" text="No" />
+                      <TableColumn fx:id="tcnamaBahan" prefWidth="215.20002365112305" text="Nama Bahan" />
+                        <TableColumn fx:id="tcstok" prefWidth="113.5999755859375" text="Stok" />
+                    </columns>
+                  </TableView>
+                  <ChoiceBox fx:id="cbalamat" layoutX="20.0" layoutY="98.0" prefHeight="26.0" prefWidth="207.0" />
+                  <TextField layoutX="577.0" layoutY="512.0" prefHeight="39.0" prefWidth="26.0" text="1" />
+                  <Button fx:id="selanjutnya" layoutX="612.0" layoutY="525.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="79.0" text="Selanjutnya" />
+                  <Button fx:id="kembali" layoutX="498.0" layoutY="525.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="66.0" text="Kembali" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
     </children>
 </AnchorPane>
