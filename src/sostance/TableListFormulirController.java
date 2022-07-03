@@ -7,13 +7,18 @@ package sostance;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import static javafx.collections.FXCollections.observableArrayList;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -44,8 +49,56 @@ public class TableListFormulirController implements Initializable {
     @FXML 
     private TableColumn <IsiFormulir, String> tcRadioButn;
     
-    ObservableList <IsiFormulir> dataFormulir = FXCollections.observableArrayList();
-    ListIsiFormulir datalistFormulir;
+    ObservableList dataFormulir = observableArrayList();
+    ArrayList<IsiFormulir> simpanFormulir = new ArrayList<>();
+    XStream xstream = new XStream(new StaxDriver());
+    
+    
+    void bukaData() {
+        FileInputStream berkasMasuk;
+        try {
+            berkasMasuk = new FileInputStream("ListTempatFormulir.xml");
+            int isi;
+            char c;
+            String s = "";
+            while ((isi = berkasMasuk.read()) != - 1) {
+                c = (char) isi;
+                s = s + c;
+            }
+            simpanFormulir = (ArrayList<IsiFormulir>) xstream.fromXML(s);
+            berkasMasuk.close();
+        } catch (Exception e) {
+            System.out.println("Terjadi kesalahan: " + e.getMessage());
+        }
+    }
+    
+    void simpanData() {
+        String xml = xstream.toXML(simpanFormulir);
+        FileOutputStream outDoc;
+        try {
+            byte[] data = xml.getBytes("UTF-8");
+            outDoc = new FileOutputStream("ListTempatFormulir.xml");
+            outDoc.write(data);
+            outDoc.close();
+        } catch (Exception io) {
+            System.err.println("An error occurs: " + io.getMessage());
+        }
+        System.out.println("Data sudah disimpan");
+    }
+    
+    @FXML
+    private void hapusButton(ActionEvent event) {
+        TableView.TableViewSelectionModel selectionModel = tvDataf.getSelectionModel();
+        selectionModel.setSelectionMode(SelectionMode.SINGLE);
+        int i = selectionModel.getSelectedIndex();
+
+        if (i >= 0) {
+            dataFormulir.remove(i);
+            simpanFormulir.remove(i);
+        }
+        
+        simpanData();
+    }
     
     
     /**
@@ -60,26 +113,17 @@ public class TableListFormulirController implements Initializable {
         tcKK.setCellValueFactory(new PropertyValueFactory <> ("KKm"));
         tcAlamat.setCellValueFactory(new PropertyValueFactory <> ("Alamatm"));
         tcRadioButn.setCellValueFactory(new PropertyValueFactory <> ("RadioButn"));
-        XStream xstream = new XStream(new StaxDriver());
-        FileInputStream berkasMasuk;
         
-        try{
-            berkasMasuk = new FileInputStream ("ListTempatFormulir.xml");
-            int isi;
-            char c;
-            String s = "";
-            while ((isi = berkasMasuk.read()) != -1){
-                c = (char) isi;
-                s = s + c;
-            }
-            datalistFormulir = (ListIsiFormulir) xstream.fromXML(s);
-            berkasMasuk.close();
-        } catch (Exception e){
-            System.err.println("Terjadi kesalahan " + e.getMessage());
+        bukaData();
+        simpanData();
+        
+        for (int i = 0; i < simpanFormulir.size(); i++) {
+            dataFormulir.add(simpanFormulir.get(i));
         }
-        tvDataf.setItems(datalistFormulir.getListDataFormulir());
-        datalistFormulir.showData();
-    }    
-    
+        
+        tvDataf.setItems(dataFormulir);
+
+    }
+
 }
     

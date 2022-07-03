@@ -6,21 +6,26 @@ package sostance;
 
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.chart.PieChart;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
 
 
 
@@ -73,7 +78,8 @@ public class FormController implements Initializable {
     
     private String pekerjaanm,Agamam,NamaLengkapm,NIKm,KKm,Alamatm,RadioButn;
     ListIsiFormulir listformulir;
-    
+        ArrayList<IsiFormulir> simpanFormulir = new ArrayList<>();
+
     
     @FXML
     private void ButtonTampilkanData(ActionEvent event) throws IOException {
@@ -83,7 +89,24 @@ public class FormController implements Initializable {
         stage.setScene(new Scene(scene2));
         stage.show();
     }
-    
+     void bukaData() {
+        XStream xstream = new XStream(new StaxDriver());
+        FileInputStream berkasMasuk;
+        try {
+            berkasMasuk = new FileInputStream("ListTempatFormulir.xml");
+            int isi;
+            char c;
+            String s = "";
+            while ((isi = berkasMasuk.read()) != - 1) {
+                c = (char) isi;
+                s = s + c;
+            }
+            simpanFormulir = (ArrayList<IsiFormulir>) xstream.fromXML(s);
+            berkasMasuk.close();
+        } catch (Exception e) {
+            System.out.println("Terjadi kesalahan: " + e.getMessage());
+        }
+    }
     @FXML
     private void ButtonSimpan(ActionEvent event) throws IOException {
     XStream xstream = new XStream(new StaxDriver());
@@ -111,8 +134,8 @@ public class FormController implements Initializable {
         RadioButn = tTipe;
         System.out.println(RadioButn);
         
-        listformulir.setData(pekerjaanm, Agamam, NamaLengkapm, NIKm, KKm, Alamatm, RadioButn);
-        String xml = xstream.toXML(listformulir);
+        simpanFormulir.add(new IsiFormulir(pekerjaanm, Agamam, NamaLengkapm, NIKm, KKm, Alamatm, RadioButn));
+        String xml = xstream.toXML(simpanFormulir);
         FileOutputStream outDoc;
         try{
             byte[]data = xml.getBytes("UTF-8");
@@ -125,34 +148,6 @@ public class FormController implements Initializable {
         System.out.println("Data sudah disimpan");
     }
     
-   
-    
-    
-
-
-
-    
-    private void form(ActionEvent event) {
-       
-    }
-    
-    private void bansos(ActionEvent event) {
-       
-    }
-    
-    private void modal(ActionEvent event) {
-       
-    }
-    
-    private void list(ActionEvent event) {
-       
-    }
-    
-    private void tempat(ActionEvent event) {
-       
-    }
-    
-    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -162,7 +157,7 @@ public class FormController implements Initializable {
         data.add(new PieChart.Data("2012",3580));
         data.add(new PieChart.Data("2013",3850));
         data.add(new PieChart.Data("2014",4250));
-        
+        bukaData();
         miski.setData(data);
     }    
     
