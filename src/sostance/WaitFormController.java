@@ -74,7 +74,8 @@ public class WaitFormController implements Initializable {
         }
         System.out.println("Data sudah disimpan");
     }
-        @FXML
+       
+    @FXML
     private void ButtonSimpan(ActionEvent event) throws IOException {
     XStream xstream = new XStream(new StaxDriver());
         
