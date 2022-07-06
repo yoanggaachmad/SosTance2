@@ -21,6 +21,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
@@ -52,7 +53,7 @@ public class FormController implements Initializable {
     private RadioButton perm;
     
     @FXML
-    private TextField Agama;
+    private ChoiceBox Agama;
     
     @FXML
     private TextField Alamat;
@@ -118,7 +119,7 @@ public class FormController implements Initializable {
             tTipe = "Perempuan";
         }
         pekerjaanm = pekerjaan.getText();
-        Agamam = Agama.getText();
+        Agamam = Agama.getValue().toString();
         NamaLengkapm = NamaLengkap.getText();
         NIKm = NIK.getText();
         KKm = KK.getText();
@@ -159,6 +160,9 @@ public class FormController implements Initializable {
         data.add(new PieChart.Data("2014",4250));
         bukaData();
         miski.setData(data);
+        
+        Agama.setValue("Islam");
+        Agama.getItems().addAll("Islam", "Kristen", "Katolik", "Hindu", "Buddha", "Konghucu");
     }    
     
 }
