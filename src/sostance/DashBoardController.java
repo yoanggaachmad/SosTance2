@@ -26,7 +26,7 @@ public class DashBoardController implements Initializable {
    @FXML
     private void DashboardButtonAction(ActionEvent event) {
        OpenScene object = new OpenScene();
-       Pane halaman = object.getPane("DashBoard");
+       Pane halaman = object.getPane("FXMLDocument");
        mainPane.setCenter(halaman);
        mainPane.requestFocus();
     }

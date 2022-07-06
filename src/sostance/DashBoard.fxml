@@ -3,16 +3,18 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="602.0" prefWidth="915.0">
          <left>
@@ -177,7 +179,7 @@
             </Label>
          </top>
          <center>
-            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #35641;" BorderPane.alignment="CENTER">
                <children>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="712.0" style="-fx-background-color: #D1F2F2;">
                      <children>
@@ -192,22 +194,87 @@
                         </Button>
                      </children>
                   </HBox>
-                  <Label prefHeight="47.0" prefWidth="246.0" text="Selamat Datang!" underline="true">
-                     <font>
-                        <Font size="32.0" />
-                     </font>
-                     <VBox.margin>
-                        <Insets left="200.0" />
-                     </VBox.margin>
-                  </Label>
                   <HBox prefHeight="515.0" prefWidth="714.0">
                      <children>
-                        <VBox prefHeight="510.0" prefWidth="347.0">
+                        <Pane prefHeight="550.0" prefWidth="713.0">
                            <children>
-                              <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#DashboardPengajuanAction" prefHeight="150.0" prefWidth="178.0" style="-fx-background-color: #353641;" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets left="60.0" top="40.0" />
-                                 </VBox.margin>
+                              <ImageView fitHeight="386.0" fitWidth="715.0" layoutX="10.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../../Downloads/Peta%20Masa%20Depan%20(3).jpg" />
+                                 </image>
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                              </ImageView>
+                              <Button alignment="BOTTOM_CENTER" layoutX="407.0" layoutY="125.0" mnemonicParsing="false" onAction="#DashboardmodalAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5e5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="96.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Gambar/pay.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="14.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label prefHeight="34.0" prefWidth="163.0" text="Bantuan Modal Usaha" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                             <VBox.margin>
+                                                <Insets />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BOTTOM_CENTER" layoutX="407.0" layoutY="266.0" mnemonicParsing="false" onAction="#SubsidiKebutuhan" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="96.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Gambar/list.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="15.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label text="Kebutuhan Subsidi" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets left="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="266.0" mnemonicParsing="false" onAction="#DashboardtmptAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <VBox prefHeight="200.0" prefWidth="100.0">
+                                       <children>
+                                          <ImageView fitHeight="96.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Gambar/fruit-shop.png" />
+                                             </image>
+                                             <VBox.margin>
+                                                <Insets left="15.0" />
+                                             </VBox.margin>
+                                          </ImageView>
+                                          <Label text=" Modal Tempat Usaha" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
+                                       </children>
+                                    </VBox>
+                                 </graphic>
+                              </Button>
+                              <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="125.0" mnemonicParsing="false" onAction="#DashboardPengajuanAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textFill="WHITE">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
@@ -215,105 +282,27 @@
                                     <Font size="14.0" />
                                  </font>
                                  <graphic>
-                                    <VBox prefHeight="161.0" prefWidth="187.0">
+                                    <VBox prefHeight="116.0" prefWidth="100.0">
                                        <children>
                                           <ImageView fitHeight="96.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
                                                 <Image url="@../Gambar/social-care.png" />
                                              </image>
                                              <VBox.margin>
-                                                <Insets left="30.0" />
-                                             </VBox.margin></ImageView>
-                                          <Label prefHeight="18.0" prefWidth="171.0" text="Pengajuan Bantuan Sosial" textFill="WHITE">
-                                             <VBox.margin>
-                                                <Insets left="10.0" />
-                                             </VBox.margin></Label>
-                                       </children>
-                                    </VBox>
-                                 </graphic>
-                              </Button>
-                              <Button alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#SubsidiKebutuhan" prefHeight="150.0" prefWidth="178.0" style="-fx-background-color: #353641;" textFill="WHITE">
-                                 <VBox.margin>
-                                    <Insets left="60.0" top="40.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <graphic>
-                                    <VBox prefHeight="200.0" prefWidth="100.0">
-                                       <children>
-                                          <ImageView fitHeight="97.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../Gambar/list.png" />
-                                             </image>
-                                             <VBox.margin>
-                                                <Insets left="30.0" />
+                                                <Insets left="12.0" />
                                              </VBox.margin>
                                           </ImageView>
-                                          <Label text="List Kebutuhan Subsidi" textFill="WHITE">
+                                          <Label prefHeight="18.0" prefWidth="171.0" text="Bantuan Sosial" textFill="WHITE">
                                              <VBox.margin>
-                                                <Insets left="15.0" />
-                                             </VBox.margin></Label>
-                                       </children>
-                                    </VBox>
-                                 </graphic>
-                              </Button>
-                           </children>
-                        </VBox>
-                        <VBox layoutX="10.0" layoutY="10.0" prefHeight="483.0" prefWidth="367.0">
-                           <children>
-                              <Button alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#DashboardmodalAction" prefHeight="150.0" prefWidth="182.0" style="-fx-background-color: #353641;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                                 <VBox.margin>
-                                    <Insets left="60.0" top="40.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <graphic>
-                                    <VBox prefHeight="200.0" prefWidth="100.0">
-                                       <children>
-                                          <ImageView fitHeight="145.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../Gambar/pay.png" />
-                                             </image>
-                                             <VBox.margin>
-                                                <Insets left="37.0" />
-                                             </VBox.margin>
-                                          </ImageView>
-                                          <Label prefHeight="34.0" prefWidth="163.0" text="Pengajuan Bantuan Modal Usaha" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                                             <VBox.margin>
-                                                <Insets left="5.0" />
+                                                <Insets left="22.0" />
                                              </VBox.margin>
                                           </Label>
                                        </children>
                                     </VBox>
                                  </graphic>
                               </Button>
-                              <Button alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#DashboardtmptAction" prefHeight="150.0" prefWidth="178.0" style="-fx-background-color: #353641;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
-                                 <VBox.margin>
-                                    <Insets left="60.0" top="40.0" />
-                                 </VBox.margin>
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <graphic>
-                                    <VBox prefHeight="200.0" prefWidth="100.0">
-                                       <children>
-                                          <ImageView fitHeight="97.0" fitWidth="164.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@../Gambar/fruit-shop.png" />
-                                             </image>
-                                             <VBox.margin>
-                                                <Insets left="32.0" />
-                                             </VBox.margin>
-                                          </ImageView>
-                                          <Label text="Penyediaan Modal Tempat Usaha" textAlignment="CENTER" textFill="WHITE" wrapText="true" />
-                                       </children>
-                                    </VBox>
-                                 </graphic>
-                              </Button>
                            </children>
-                        </VBox>
+                        </Pane>
                      </children>
                   </HBox>
                </children>
