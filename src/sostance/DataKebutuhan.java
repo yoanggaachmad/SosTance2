@@ -4,6 +4,7 @@
  */
 package sostance;
 
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 /**
@@ -11,8 +12,12 @@ import javafx.beans.property.SimpleStringProperty;
  * @author arulh
  */
 public class DataKebutuhan {
+
+    
     private SimpleStringProperty kebutuhan;
     private SimpleStringProperty aksi;
+    
+    
     
     public DataKebutuhan(){
         this("","");
@@ -37,6 +42,10 @@ public class DataKebutuhan {
     
     public void setAksi(String action){
         this.aksi.set(action);
+    }
+    
+    static void remove(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }
