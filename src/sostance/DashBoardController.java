@@ -96,7 +96,10 @@ public class DashBoardController implements Initializable {
     
     @FXML
     private void DashboardtmptAction(ActionEvent event) {
-       
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("ModalTempatUsaha");
+        mainPane.setCenter(halaman);
+        mainPane.requestFocus();
     }
     
     @Override

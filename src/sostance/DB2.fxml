@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DB2Controller">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DB2Controller">
    <children>
       <AnchorPane id="AnchorPane" layoutX="1.0" prefHeight="602.0" prefWidth="712.0">
           <children>
@@ -95,7 +95,7 @@
                                           </VBox>
                                        </graphic>
                                     </Button>
-                                    <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="266.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                    <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="266.0" mnemonicParsing="false" onAction="#modalButtonAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                        <font>
                                           <Font size="14.0" />
                                        </font>

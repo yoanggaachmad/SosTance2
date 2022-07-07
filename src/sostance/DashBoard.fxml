@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="602.0" prefWidth="915.0">
          <left>
@@ -242,7 +242,7 @@
                                     </VBox>
                                  </graphic>
                               </Button>
-                              <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="125.0" mnemonicParsing="false" onAction="#DashboardPengajuanAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textFill="WHITE">
+                              <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="125.0" mnemonicParsing="false" onAction="#BansosButtonAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textFill="WHITE">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>
