@@ -7,6 +7,7 @@ package sostance;
 import com.thoughtworks.xstream.XStream;
 import com.thoughtworks.xstream.io.xml.StaxDriver;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
@@ -59,21 +60,42 @@ public class WaitFormController implements Initializable {
     ArrayList<IsiFormulir> SimpanFormulir = new ArrayList<>();
     XStream xstream = new XStream(new StaxDriver());
     
-    
-    
-    void simpanData() {
-        String xml = xstream.toXML(SimpanFormulir);
-        FileOutputStream outDoc;
-        try {
-            byte[] data = xml.getBytes("UTF-8");
-            outDoc = new FileOutputStream("ListKebutuhan.xml");
-            outDoc.write(data);
+    void bacaData() {
+        int[] larik = new int[100];
+        XStream xstream = new XStream(new StaxDriver());
+        FileInputStream outDoc;
+        try{
+            outDoc = new FileInputStream("ListKebutuhan.xml");
+            int isi; char c; String s = "";
+            while((isi = outDoc.read()) != 1){
+                c = (char) isi;
+                s = s + c;
+            }
+            simpanKebutuhan = (ArrayList<IsiKebutuhan> ) xstream.fromXML(s);
             outDoc.close();
-        } catch (Exception io) {
-            System.err.println("An error occurs: " + io.getMessage());
+        } catch (Exception e){
+            System.out.println("Terjadi kesalahan : " + e.getMessage());
         }
-        System.out.println("Data sudah disimpan");
+        for(int larikk : larik){
+            System.out.println(larikk + "");
+        } System.out.println("");
     }
+    
+    
+    
+//    void simpanData() {
+//        String xml = xstream.toXML(SimpanFormulir);
+//        FileOutputStream outDoc;
+//        try {
+//            byte[] data = xml.getBytes("UTF-8");
+//            outDoc = new FileOutputStream("ListKebutuhan.xml");
+//            outDoc.write(data);
+//            outDoc.close();
+//        } catch (Exception io) {
+//            System.err.println("An error occurs: " + io.getMessage());
+//        }
+//        System.out.println("Data sudah disimpan");
+//    }
        
     @FXML
     private void ButtonSimpan(ActionEvent event) throws IOException {
@@ -97,7 +119,7 @@ public class WaitFormController implements Initializable {
             outDoc = new FileOutputStream("ListKebutuhan.xml");
             outDoc.write(data);
             outDoc.close();
-        } catch(Exception io){
+        } catch(Exception io){  
             System.err.println("An error occurs: " + io.getMessage());
         }
         System.out.println("Data sudah disimpan");
@@ -137,7 +159,7 @@ public class WaitFormController implements Initializable {
             SimpanFormulir.remove(i);
         }
         
-        simpanData();
+        
     }
    
     @Override
@@ -148,7 +170,7 @@ public class WaitFormController implements Initializable {
         data = new DataKebutuhanList();
         tvKebutuhan.setItems(data.getData());
         
-        simpanData();
+//        simpanData();
         
         for (int i = 0; i < SimpanFormulir.size(); i++) {
             DataFormulir.add(SimpanFormulir.get(i));
@@ -156,7 +178,7 @@ public class WaitFormController implements Initializable {
         
         tvKebutuhan.setItems(DataFormulir);
             
-        
+        bacaData();
     }    
     
 }
