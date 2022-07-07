@@ -12,30 +12,24 @@ import javafx.beans.property.SimpleStringProperty;
  */
 public class SubsidiKebutuhan {
     
-    private SimpleStringProperty nomor;
+//    private SimpleStringProperty nomor;
     private SimpleStringProperty namaBahan;
     private SimpleStringProperty stok;
     private SimpleStringProperty alamatPengambilan;
     
     public SubsidiKebutuhan(){
-        this("", "", "", "");
+        this("", "", "" );
     }
-    public SubsidiKebutuhan(String nomor, String namaBahan, String stok, String alamatPengambilan){
-        this.nomor = new SimpleStringProperty(nomor);
+    public SubsidiKebutuhan(String namaBahan, String stok, String alamatPengambilan){
+//        this.nomor = new SimpleStringProperty(nomor);
         this.namaBahan = new SimpleStringProperty(namaBahan);
         this.stok = new SimpleStringProperty(stok);
         this.alamatPengambilan = new SimpleStringProperty(alamatPengambilan);
 
     }
 
-    public String getNomor() {
-        return nomor.get();
-    }
+  
 
-    public String setNomor(String n) {
-        this.nomor.set(n);
-        return null;
-    }
 
     public String getNamaBahan() {
         return namaBahan.get();
