@@ -8,10 +8,7 @@ import java.net.URL;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Pane;
 
-/**
- *
- * @author Nadira Adiva W
- */
+
 public class OpenScene {
     private Pane halaman;
     
