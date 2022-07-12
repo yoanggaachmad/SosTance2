@@ -27,6 +27,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 
 /**
  *
@@ -34,10 +35,12 @@ import javafx.scene.image.ImageView;
  */
 public class ListSubsidiKebutuhanController implements Initializable {
 
+    @FXML
+   BorderPane mainPane;
+
     XStream xs = new XStream(new StaxDriver());
     ArrayList<Data> tvList = new ArrayList<>();
 
-//    ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
     ObservableList dataAll = observableArrayList();
     ObservableList<PieChart.Data> data = FXCollections.observableArrayList();
 

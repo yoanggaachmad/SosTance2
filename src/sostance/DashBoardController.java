@@ -57,7 +57,9 @@ public class DashBoardController implements Initializable {
         mainPane.requestFocus();
     }
     
-    @FXML
+    
+    
+   @FXML
     private void ListSubsidiKebutuhan(ActionEvent event) {
         OpenScene object = new OpenScene();
         Pane halaman = object.getPane("ListSubsidiKebutuhan");

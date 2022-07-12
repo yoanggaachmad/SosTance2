@@ -4,10 +4,7 @@
  */
 package sostance;
 
-/**
- *
- * @author Nadira Adiva W
- */
+
 public class Data {
     private String nama;
     private String banyak;
