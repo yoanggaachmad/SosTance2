@@ -23,16 +23,11 @@
                      <children>
                         <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="712.0" style="-fx-background-color: #D1F2F2;">
                            <children>
-                              <Label prefHeight="24.0" prefWidth="487.0" text="Anda belum mengisi formulir pendataan.Mohon untuk mengisi formulir terlebih dahulu.......">
+                              <Label prefHeight="24.0" prefWidth="487.0" text="Selamat Datang di SosTance! Silahkan pilih menu dengan menekan tombol di sebelah kiri.">
                                  <HBox.margin>
                                     <Insets left="2.0" />
                                  </HBox.margin>
                               </Label>
-                              <Button alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="26.0" prefWidth="143.0" style="-fx-background-color: default;" text="Lengkapi formulit disini" textFill="#1a00ff" underline="true">
-                                 <HBox.margin>
-                                    <Insets left="80.0" />
-                                 </HBox.margin>
-                              </Button>
                            </children>
                         </HBox>
                         <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="0.0" prefWidth="712.0">
@@ -56,13 +51,13 @@
                                              <children>
                                                 <ImageView fitHeight="96.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
                                                    <image>
-                                                      <Image url="@../Gambar/pay.png" />
+                                                      <Image url="@../Gambar/google-forms.png" />
                                                    </image>
                                                    <VBox.margin>
                                                       <Insets left="14.0" />
                                                    </VBox.margin>
                                                 </ImageView>
-                                                <Label prefHeight="34.0" prefWidth="163.0" text="Bantuan Modal Usaha" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                                <Label prefHeight="34.0" prefWidth="163.0" text="    Pengisian Formulir" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                                    <VBox.margin>
                                                       <Insets />
                                                    </VBox.margin>
@@ -95,7 +90,7 @@
                                           </VBox>
                                        </graphic>
                                     </Button>
-                                    <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="266.0" mnemonicParsing="false" onAction="#modalButtonAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                    <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="266.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                        <font>
                                           <Font size="14.0" />
                                        </font>

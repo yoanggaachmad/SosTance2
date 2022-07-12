@@ -42,7 +42,7 @@
                                     <Font size="11.0" />
                                  </font>
                               </Text>
-                              <Button layoutX="459.0" layoutY="271.0" mnemonicParsing="false" onAction="#buttonDelete" text="Delete" />
+                              <Button layoutX="459.0" layoutY="271.0" mnemonicParsing="false" onAction="#buttonDelete" text="Hapus" />
                            </children>
                         </Pane>
                      </children>
