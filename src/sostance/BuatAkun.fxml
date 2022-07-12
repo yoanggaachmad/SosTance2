@@ -7,24 +7,35 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="loginsostance.BuatAkunController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.BuatAkunController">
    <children>
-      <AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320">
+      <AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0">
           <children>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="915.0">
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="915.0">
                <children>
-                  <ImageView fx:id="ivBackground" fitHeight="601.0" fitWidth="915.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="ivBackground" fitHeight="601.0" fitWidth="915.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../gambar/SOSTANC%20(2).png" />
+                        <Image url="@../Gambar/SOSTANC%20(buat%20akun2).jpg" />
                      </image>
                   </ImageView>
-                  <TextField fx:id="tfBuatUser" layoutX="434.0" layoutY="263.0" />
-                  <TextField fx:id="tfBuatPassword" layoutX="434.0" layoutY="306.0" />
-                  <Button fx:id="btMasukLogin" layoutX="384.0" layoutY="351.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="118.0" style="-fx-background-color: #b0a678;" text="login">
+                  <TextField fx:id="tfBuatEmail" layoutX="442.0" layoutY="309.0">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font></TextField>
+                  <TextField fx:id="tfBuatPassword" layoutX="442.0" layoutY="361.0" prefHeight="26.0" prefWidth="158.0">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font></TextField>
+                  <Button fx:id="btSimpan" layoutX="398.0" layoutY="463.0" mnemonicParsing="false" onAction="#simpan" prefHeight="19.0" prefWidth="118.0" style="-fx-background-color: #b0a678; -fx-background-radius: 50;" text="Simpan">
                      <font>
                         <Font name="System Bold" size="15.0" />
                      </font>
                   </Button>
+                  <TextField fx:id="tfBuatUser" layoutX="442.0" layoutY="413.0" prefHeight="26.0" prefWidth="158.0">
+                     <font>
+                        <Font name="Times New Roman Bold" size="12.0" />
+                     </font>
+                  </TextField>
                </children>
             </AnchorPane>
           </children>

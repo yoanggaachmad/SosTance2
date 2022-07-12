@@ -60,27 +60,25 @@ public class WaitFormController implements Initializable {
     ArrayList<IsiFormulir> SimpanFormulir = new ArrayList<>();
     XStream xstream = new XStream(new StaxDriver());
     
-    void bacaData() {
-        int[] larik = new int[100];
-        XStream xstream = new XStream(new StaxDriver());
-        FileInputStream outDoc;
-        try{
-            outDoc = new FileInputStream("ListKebutuhan.xml");
-            int isi; char c; String s = "";
-            while((isi = outDoc.read()) != 1){
-                c = (char) isi;
-                s = s + c;
-            }
-            simpanKebutuhan = (ArrayList<IsiKebutuhan> ) xstream.fromXML(s);
-            outDoc.close();
-        } catch (Exception e){
-            System.out.println("Terjadi kesalahan : " + e.getMessage());
-        }
-        for(int larikk : larik){
-            System.out.println(larikk + "");
-        } System.out.println("");
-    }
-    
+//    void bacaData() {
+//        
+////        XStream xstream = new XStream(new StaxDriver());
+//        FileInputStream outDoc;
+//        try{
+//            outDoc = new FileInputStream("ListKebutuhan.xml");
+//            int isi; char c; String s = "";
+//            while((isi = outDoc.read()) != 1){
+//                c = (char) isi;
+//                s = s + c;
+//            }
+//            simpanKebutuhan = (ArrayList<IsiKebutuhan> ) xstream.fromXML(s);
+//            outDoc.close();
+//        } catch (Exception e){
+//            System.out.println("Terjadi kesalahan : " + e.getMessage());
+//        }
+//        
+//    }
+//    
     
     
 //    void simpanData() {
@@ -124,7 +122,8 @@ public class WaitFormController implements Initializable {
         }
         System.out.println("Data sudah disimpan");
         
-        
+        tfKebutuhan.setText("");
+        tfAksi.setText("");
        
         data.setData(kebutuhan, aksi);
         tvKebutuhan.setItems(data.getData());
@@ -132,15 +131,15 @@ public class WaitFormController implements Initializable {
 
     }
     
-    @FXML
-    private void buttonTambah(ActionEvent event) {
-       String kebutuhan = tfKebutuhan.getText();
-       String aksi = tfAksi.getText();
-       
-       data.setData(kebutuhan, aksi);
-       tvKebutuhan.setItems(data.getData());
-        System.out.println("Sukses menambahkan kebutuhan");
-    }
+//    @FXML
+//    private void buttonTambah(ActionEvent event) {
+//       String kebutuhan = tfKebutuhan.getText();
+//       String aksi = tfAksi.getText();
+//       
+//       data.setData(kebutuhan, aksi);
+//       tvKebutuhan.setItems(data.getData());
+//        System.out.println("Sukses menambahkan kebutuhan");
+//    }
     
     
     @FXML
@@ -150,22 +149,25 @@ public class WaitFormController implements Initializable {
     
     @FXML
     private void buttonDelete(ActionEvent event) {
-       TableView.TableViewSelectionModel selectionModel = tvKebutuhan.getSelectionModel();
-        selectionModel.setSelectionMode(SelectionMode.SINGLE);
-        int i = selectionModel.getSelectedIndex();
-
-        if (i >= 0) {
-            DataFormulir.remove(i);
-            SimpanFormulir.remove(i);
-        }
+//       TableView.TableViewSelectionModel selectionModel = tvKebutuhan.getSelectionModel();
+//        selectionModel.setSelectionMode(SelectionMode.SINGLE);
+//        int i = selectionModel.getSelectedIndex();
+//
+//        if (i >= 0) {
+//            DataFormulir.remove(i);
+//            SimpanFormulir.remove(i);
+//        }
         
-        
+        int selectedIndex = tvKebutuhan.getSelectionModel().getSelectedIndex();
+        tvKebutuhan.getItems().remove(selectedIndex);
     }
    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        tcKebutuhan.setCellValueFactory(new PropertyValueFactory<>("Kebutuhan"));
-        tcAksi.setCellValueFactory(new PropertyValueFactory<>("Kebutuhan"));
+//        bacaData();
+
+        tcKebutuhan.setCellValueFactory(new PropertyValueFactory<>("kebutuhan"));
+        tcAksi.setCellValueFactory(new PropertyValueFactory<>("aksi"));
 
         data = new DataKebutuhanList();
         tvKebutuhan.setItems(data.getData());
@@ -178,7 +180,6 @@ public class WaitFormController implements Initializable {
         
         tvKebutuhan.setItems(DataFormulir);
             
-        bacaData();
     }    
     
 }

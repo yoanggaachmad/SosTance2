@@ -6,20 +6,18 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.BantuanSosialController">
     <children>
-      <Label fx:id="label1" layoutX="165.0" layoutY="21.0" minHeight="16" minWidth="69" prefHeight="46.0" prefWidth="208.0" text="Bantuan Sosial">
+      <Label fx:id="label1" layoutX="136.0" layoutY="55.0" minHeight="16" minWidth="69" prefHeight="46.0" prefWidth="208.0" text="Bantuan Sosial">
          <font>
             <Font name="System Bold" size="30.0" />
          </font>
       </Label>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" />
-      <Pane layoutX="73.0" layoutY="137.0" prefHeight="285.0" prefWidth="398.0" style="-fx-background-color: #ffffff;">
+      <Pane layoutY="101.0" prefHeight="456.0" prefWidth="585.0" style="-fx-background-color: #ffffff;">
          <children>
             <Text layoutX="78.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Lengkap  :" wrappingWidth="98.93670654296875" />
             <TextField layoutX="177.0" layoutY="25.0" prefHeight="25.0" prefWidth="219.0" />

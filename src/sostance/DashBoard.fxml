@@ -38,7 +38,7 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="490.0" prefWidth="210.0" stylesheets="@CSSOWW.css">
                      <children>
-                        <Button layoutX="16.0" layoutY="115.0" mnemonicParsing="false" onAction="#PengisianButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="       Pengisian Formulir" />
+                        <Button layoutX="16.0" layoutY="115.0" mnemonicParsing="false" onAction="#PengisianButtonAction" prefHeight="46.0" prefWidth="176.0" text="       Pengisian Formulir" />
                         <Label layoutX="-1.0" prefHeight="34.0" prefWidth="210.0" style="-fx-background-color: #6FCCE0;">
                            <font>
                               <Font size="14.0" />
@@ -63,23 +63,7 @@
                               </HBox>
                            </graphic>
                         </Button>
-                        <Button layoutX="16.0" layoutY="257.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Pengajuan Bantuan Modal Usaha" wrapText="true">
-                           <font>
-                              <Font size="11.0" />
-                           </font>
-                           <graphic>
-                              <HBox prefHeight="38.0" prefWidth="20.0">
-                                 <children>
-                                    <ImageView fitHeight="73.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@../Gambar/save-money.png" />
-                                       </image>
-                                    </ImageView>
-                                 </children>
-                              </HBox>
-                           </graphic>
-                        </Button>
-                        <Button layoutX="16.0" layoutY="330.0" mnemonicParsing="false" onAction="#SubsidiKebutuhan" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="List Kebutuhan Bantuan Subsidi" wrapText="true">
+                        <Button layoutX="17.0" layoutY="256.0" mnemonicParsing="false" onAction="#ListSubsidiKebutuhan" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="List Kebutuhan Bantuan Subsidi" wrapText="true">
                            <graphic>
                               <HBox prefHeight="22.0" prefWidth="22.0">
                                  <children>
@@ -92,7 +76,7 @@
                               </HBox>
                            </graphic>
                         </Button>
-                        <Button layoutX="16.0" layoutY="399.0" mnemonicParsing="false" onAction="#modalButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Penyediaan Modal Tempat Usaha" wrapText="true">
+                        <Button layoutX="16.0" layoutY="321.0" mnemonicParsing="false" onAction="#modalButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Penyediaan Modal Tempat Usaha" wrapText="true">
                            <graphic>
                               <HBox prefHeight="22.0" prefWidth="22.0">
                                  <children>
@@ -174,7 +158,7 @@
                                     <DropShadow />
                                  </effect>
                               </ImageView>
-                              <Button alignment="BOTTOM_CENTER" layoutX="407.0" layoutY="125.0" mnemonicParsing="false" onAction="#DashboardmodalAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5e5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                              <Button alignment="BOTTOM_CENTER" layoutX="407.0" layoutY="125.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5e5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -183,13 +167,13 @@
                                        <children>
                                           <ImageView fitHeight="96.0" fitWidth="97.0" pickOnBounds="true" preserveRatio="true">
                                              <image>
-                                                <Image url="@../Gambar/pay.png" />
+                                                <Image url="@../Gambar/google-forms.png" />
                                              </image>
                                              <VBox.margin>
                                                 <Insets left="14.0" />
                                              </VBox.margin>
                                           </ImageView>
-                                          <Label prefHeight="34.0" prefWidth="163.0" text="Bantuan Modal Usaha" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                                          <Label prefHeight="28.0" prefWidth="144.0" text="    Pengisian Formulir" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                              <VBox.margin>
                                                 <Insets />
                                              </VBox.margin>
@@ -198,7 +182,7 @@
                                     </VBox>
                                  </graphic>
                               </Button>
-                              <Button alignment="BOTTOM_CENTER" layoutX="407.0" layoutY="266.0" mnemonicParsing="false" onAction="#SubsidiKebutuhan" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textFill="WHITE">
+                              <Button alignment="BOTTOM_CENTER" layoutX="407.0" layoutY="266.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textFill="WHITE">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -222,7 +206,7 @@
                                     </VBox>
                                  </graphic>
                               </Button>
-                              <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="266.0" mnemonicParsing="false" onAction="#DashboardtmptAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                              <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="266.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #5E5f94;" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -242,7 +226,7 @@
                                     </VBox>
                                  </graphic>
                               </Button>
-                              <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="125.0" mnemonicParsing="false" onAction="#BansosButtonAction" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textFill="WHITE">
+                              <Button alignment="BOTTOM_CENTER" layoutX="260.0" layoutY="125.0" mnemonicParsing="false" prefHeight="133.0" prefWidth="142.0" style="-fx-background-color: #353641;" textFill="WHITE">
                                  <opaqueInsets>
                                     <Insets />
                                  </opaqueInsets>

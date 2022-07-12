@@ -4,6 +4,7 @@
  */
 package sostance;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -57,7 +58,7 @@ public class DashBoardController implements Initializable {
     }
     
     @FXML
-    private void SubsidiKebutuhan(ActionEvent event) {
+    private void ListSubsidiKebutuhan(ActionEvent event) {
         OpenScene object = new OpenScene();
         Pane halaman = object.getPane("ListSubsidiKebutuhan");
         mainPane.setCenter(halaman);
