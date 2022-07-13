@@ -9,6 +9,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
@@ -20,18 +21,18 @@ import javafx.scene.layout.Pane;
  * @author Lenovo
  */
 public class DashBoardController implements Initializable {
-    
-   @FXML
-   BorderPane mainPane;
-    
-   @FXML
+
+    @FXML
+    BorderPane mainPane;
+
+    @FXML
     private void DashboardButtonAction(ActionEvent event) {
-       OpenScene object = new OpenScene();
-       Pane halaman = object.getPane("DB2");
-       mainPane.setCenter(halaman);
-       mainPane.requestFocus();
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("DB2");
+        mainPane.setCenter(halaman);
+        mainPane.requestFocus();
     }
-    
+
     @FXML
     private void PengisianButtonAction(ActionEvent event) {
         OpenScene object = new OpenScene();
@@ -39,7 +40,7 @@ public class DashBoardController implements Initializable {
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
     }
-    
+
     @FXML
     private void BansosButtonAction(ActionEvent event) {
         OpenScene object = new OpenScene();
@@ -47,8 +48,7 @@ public class DashBoardController implements Initializable {
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
     }
-    
-    
+
     @FXML
     private void modalButtonAction(ActionEvent event) {
         OpenScene object = new OpenScene();
@@ -56,47 +56,53 @@ public class DashBoardController implements Initializable {
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
     }
-    
-    
-    
-   @FXML
-    private void ListSubsidiKebutuhan(ActionEvent event) {
-        OpenScene object = new OpenScene();
-        Pane halaman = object.getPane("ListSubsidiKebutuhan");
-        mainPane.setCenter(halaman);
-        mainPane.requestFocus();
+
+//    @FXML
+//    private void ListSubsidiKebutuhan(ActionEvent event) {
+//        OpenScene object = new OpenScene();
+//        Pane halaman = object.getPane("ListSubsidiKebutuhan");
+//        mainPane.setCenter(halaman);
+//        mainPane.requestFocus();
+
+    @FXML
+        void ListSubsidiKebutuhan(ActionEvent event) throws IOException {
+        Pane pane = FXMLLoader.load(ListSubsidiKebutuhanController.class.getResource("ListSubsidiKebutuhan.fxml"));
+//        Pane halaman = bukaScene.getPane("/View/Postingan");
+        mainPane.setCenter(pane);
+        System.out.println("Button list subsidi's Clicked");
     }
-    
+//    }
+
     @FXML
     private void ListButtonAction(ActionEvent event) {
-       
+
     }
-    
+
     @FXML
     private void penyediaanButtonAction(ActionEvent event) {
-       
+
     }
-    
+
     @FXML
     private void FormulirAction(ActionEvent event) {
-       
+
     }
-    
+
     @FXML
     private void DashboardPengajuanAction(ActionEvent event) {
-       
+
     }
-    
+
     @FXML
     private void DashboardListAction(ActionEvent event) {
-       
+
     }
-    
+
     @FXML
     private void DashboardmodalAction(ActionEvent event) {
-       
+
     }
-    
+
     @FXML
     private void DashboardtmptAction(ActionEvent event) {
         OpenScene object = new OpenScene();
@@ -104,10 +110,10 @@ public class DashBoardController implements Initializable {
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
     }
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+    }
+
 }

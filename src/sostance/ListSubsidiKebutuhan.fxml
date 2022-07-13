@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.ListSubsidiKebutuhanController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.ListSubsidiKebutuhanController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="200.0" prefWidth="200.0">
          <center>
@@ -36,9 +36,9 @@
                   <PieChart fx:id="pcSubsidiKebutuhan" layoutX="399.0" layoutY="153.0" prefHeight="251.0" prefWidth="265.0" />
                   <TableView fx:id="tvlistKebutuhanSubsidi" layoutX="20.0" layoutY="141.0" prefHeight="275.0" prefWidth="355.0">
                     <columns>
-                      <TableColumn fx:id="tcnomor" prefWidth="25.5999755859375" text="No" />
-                      <TableColumn fx:id="tcnamaBahan" prefWidth="215.20002365112305" text="Nama Bahan" />
-                        <TableColumn fx:id="tcstok" prefWidth="113.5999755859375" text="Stok" />
+                      <TableColumn fx:id="tcnamaBahan" prefWidth="105.59997367858887" text="Nama Bahan" />
+                      <TableColumn fx:id="tcalamat" prefWidth="187.20001983642578" text="Alamat" />
+                        <TableColumn fx:id="tcstok" prefWidth="64.0" text="Stok" />
                     </columns>
                   </TableView>
                   <ChoiceBox fx:id="cbalamat" layoutX="20.0" layoutY="98.0" prefHeight="26.0" prefWidth="207.0" />

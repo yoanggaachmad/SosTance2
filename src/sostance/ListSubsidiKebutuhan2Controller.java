@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXML2.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
  */
 package sostance;
 
@@ -10,33 +10,31 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import static javafx.collections.FXCollections.observableArrayList;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.PieChart;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import java.util.ArrayList;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
+ * FXML Controller class
  *
- * @author arulh
+ * @author ROG
  */
-public class ListSubsidiKebutuhanController implements Initializable {
+public class ListSubsidiKebutuhan2Controller implements Initializable {
 
     @FXML
-    BorderPane mainPane;
+    private BorderPane mainPane;
 
     XStream xs = new XStream(new StaxDriver());
     ArrayList<Data> tvList = new ArrayList<>();
@@ -46,9 +44,33 @@ public class ListSubsidiKebutuhanController implements Initializable {
 
     @FXML
     private PieChart pcSubsidiKebutuhan;
-    
+
     @FXML
-    private ChoiceBox cbalamat;
+    private ChoiceBox cbAlamat;
+
+    @FXML
+    private Button dashboard;
+
+    @FXML
+    private Button pengisianFormulir;
+
+    @FXML
+    private Button pengajuanBantuanSosial;
+
+    @FXML
+    private Button pengajuanBantuanModalUsaha;
+
+    @FXML
+    private Button listKebutuhanSubsidi;
+
+    @FXML
+    private Button penyediaanModalTempatUsaha;
+
+    @FXML
+    private Button menu;
+
+    @FXML
+    private Button exit;
 
     @FXML
     private Button kembali;
@@ -57,30 +79,28 @@ public class ListSubsidiKebutuhanController implements Initializable {
     private Button selanjutnya;
 
     @FXML
+    private Button setting;
+
+    @FXML
     private ImageView ivSubsidi;
 
     @FXML
-    private TableColumn<SubsidiKebutuhan, String> tcnomor;
+    private TableColumn<SubsidiKebutuhan, String> tcNomor;
 
     @FXML
     private TableColumn<SubsidiKebutuhan, String> tcnamaBahan;
 
     @FXML
-    private TableColumn<SubsidiKebutuhan, String> tcalamat;
+    private TableColumn<SubsidiKebutuhan, String> tcAlamat;
 
     @FXML
-    private TableColumn<SubsidiKebutuhan, String> tcstok;
+    private TableColumn<SubsidiKebutuhan, String> tcStok;
 
     @FXML
-    private TableView<SubsidiKebutuhan> tvlistKebutuhanSubsidi;
+    private TableView<SubsidiKebutuhan> tvListKebutuhanSubsidi;
 
     SubsidiKebutuhanList data1;
 
-//    @FXML
-//    private void handleKurangAction(ActionEvent){
-//        data.remove(3);
-//        System.out.println("KurangButton is Clicked");
-//    }
     void bukaXML2() {
         FileInputStream input = null;
         try {
@@ -108,7 +128,7 @@ public class ListSubsidiKebutuhanController implements Initializable {
         }
     }
 
-    void saveXml() {
+    void saveXML() {
         ArrayList<Data> data = new ArrayList<>();
 
         data.add(new Data("beras", "10 karung", "Banguntapan", "Bantul"));
@@ -164,15 +184,14 @@ public class ListSubsidiKebutuhanController implements Initializable {
 
     @FXML
     void masukAlamat() {
-
-        System.out.println(cbalamat.getValue());
+        System.out.println(cbAlamat.getValue());
         System.out.println(tvList.size());
         for (int i = 0; i < tvList.size(); i++) {
 
 //            dataAll.add(((IdeBisnis) tv.get(i)));
             Data x = (Data) tvList.get(i);
             String y = x.getAlamat();
-            if (cbalamat.getValue().equals("Sleman")) {
+            if (cbAlamat.getValue().equals("Sleman")) {
                 if (tvList.get(i).getKota().equals("Sleman")) {
                     dataAll.clear();
 
@@ -184,7 +203,7 @@ public class ListSubsidiKebutuhanController implements Initializable {
                     }
 
                 }
-            } else if (cbalamat.getValue().equals("Yogyakarta")) {
+            } else if (cbAlamat.getValue().equals("Yogyakarta")) {
                 if (tvList.get(i).getKota().equals("Yogyakarta")) {
                     dataAll.clear();
                     for (Data data2 : tvList) {
@@ -196,7 +215,7 @@ public class ListSubsidiKebutuhanController implements Initializable {
                     }
 
                 }
-            } else if (cbalamat.getValue().equals("Bantul")) {
+            } else if (cbAlamat.getValue().equals("Bantul")) {
                 if (tvList.get(i).getKota().equals("Bantul")) {
                     dataAll.clear();
                     for (Data data2 : tvList) {
@@ -207,7 +226,7 @@ public class ListSubsidiKebutuhanController implements Initializable {
                     }
 
                 }
-            } else if (cbalamat.getValue().equals("Kulon Progo")) {
+            } else if (cbAlamat.getValue().equals("Kulon Progo")) {
                 if (tvList.get(i).getKota().equals("Kulon Progo")) {
                     dataAll.clear();
                     for (Data data2 : tvList) {
@@ -221,13 +240,13 @@ public class ListSubsidiKebutuhanController implements Initializable {
             }
 
         }
+
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         bukaXML2();
-        saveXml();
-//        masukAlamat();
+        //saveXml();
         System.out.println(tvList.size());
         data.add(new PieChart.Data("2010", 2880));
         data.add(new PieChart.Data("2011", 3230));
@@ -236,35 +255,14 @@ public class ListSubsidiKebutuhanController implements Initializable {
         data.add(new PieChart.Data("2014", 4250));
         pcSubsidiKebutuhan.setData(data);
 
-//            String y = x.getKategori();
-//            switch (y) {
-//                case "Kuliner":
-//                    dataKuliner.add((IdeBisnis) ib.get(i));
-//                    break;
-//                case "Fashion":
-//                    dataFashion.add((IdeBisnis) ib.get(i));
-//                    break;
-//                case "Kerajinan":
-//                    dataKerajinan.add((IdeBisnis) ib.get(i));
-//                    break;
-//                case "Agrobisnis":
-//                    dataAgro.add((IdeBisnis) ib.get(i));
-//                    break;
-//            }
-        cbalamat.setValue("");
-        cbalamat.getItems().addAll("Sleman", "Yogyakarta", "Bantul", "Kulon Progo");
+        cbAlamat.setValue("");
+        cbAlamat.getItems().addAll("Sleman", "Yogyakarta", "Bantul", "Kulon Progo");
 
-//        // TODO
-//
-        tcnamaBahan.setCellValueFactory(new PropertyValueFactory<>("namaBahan"));
-        tcstok.setCellValueFactory(new PropertyValueFactory<>("stok"));
-        tcalamat.setCellValueFactory(new PropertyValueFactory<>("alamatPengambilan"));
+        tcnamaBahan.setCellValueFactory(new PropertyValueFactory<>("nama"));
+        tcStok.setCellValueFactory(new PropertyValueFactory<>("banyak"));
+        tcAlamat.setCellValueFactory(new PropertyValueFactory<>("alamat"));
 
-//        data1 = new SubsidiKebutuhanList();
-//        data1.setDummy();
-        tvlistKebutuhanSubsidi.setItems(dataAll);
-//        
-//    
+        tvListKebutuhanSubsidi.setItems(dataAll);
     }
 
 }
