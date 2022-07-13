@@ -12,6 +12,12 @@ import javafx.collections.ObservableList;
  * @author asus
  */
 public class SubsidiKebutuhanList {
+    
+    private String nomor ;
+    private String Stok ; 
+    private String namabahan;
+    
+    
 //    private ObservableList<SubsidiKebutuhan> listData;
 //    
 //    public SubsidiKebutuhanList(){
@@ -33,4 +39,30 @@ public class SubsidiKebutuhanList {
 //
 //    }
 //    
+
+    public String getNomor() {
+        return nomor;
+    }
+
+    public void setNomor(String nomor) {
+        this.nomor = nomor;
+    }
+
+    public String getStok() {
+        return Stok;
+    }
+
+    public void setStok(String Stok) {
+        this.Stok = Stok;
+    }
+
+    public String getNamabahan() {
+        return namabahan;
+    }
+
+    public void setNamabahan(String namabahan) {
+        this.namabahan = namabahan;
+    }
+
+   
 }

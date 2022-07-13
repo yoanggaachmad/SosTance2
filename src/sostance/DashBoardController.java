@@ -57,21 +57,21 @@ public class DashBoardController implements Initializable {
         mainPane.requestFocus();
     }
 
-//    @FXML
-//    private void ListSubsidiKebutuhan(ActionEvent event) {
-//        OpenScene object = new OpenScene();
-//        Pane halaman = object.getPane("ListSubsidiKebutuhan");
-//        mainPane.setCenter(halaman);
-//        mainPane.requestFocus();
-
     @FXML
-        void ListSubsidiKebutuhan(ActionEvent event) throws IOException {
-        Pane pane = FXMLLoader.load(ListSubsidiKebutuhanController.class.getResource("ListSubsidiKebutuhan.fxml"));
-//        Pane halaman = bukaScene.getPane("/View/Postingan");
-        mainPane.setCenter(pane);
-        System.out.println("Button list subsidi's Clicked");
-    }
+    private void ListSubsidiKebutuhan(ActionEvent event) {
+        OpenScene object = new OpenScene();
+        Pane halaman = object.getPane("ListSubsidiKebutuhan");
+        mainPane.setCenter(halaman);
+        mainPane.requestFocus();
+
+//    @FXML
+//        void ListSubsidiKebutuhan(ActionEvent event) throws IOException {
+//        Pane pane = FXMLLoader.load(ListSubsidiKebutuhanController.class.getResource("ListSubsidiKebutuhan.fxml"));
+////        Pane halaman = bukaScene.getPane("/View/Postingan");
+//        mainPane.setCenter(pane);
+//        System.out.println("Button list subsidi's Clicked");
 //    }
+    }
 
     @FXML
     private void ListButtonAction(ActionEvent event) {

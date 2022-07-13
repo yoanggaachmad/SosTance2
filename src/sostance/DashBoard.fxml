@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
+<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="602.0" prefWidth="915.0">
          <left>
@@ -36,7 +36,7 @@
                         <Text layoutX="96.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id apps:9103987" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="490.0" prefWidth="210.0" stylesheets="@CSSOWW.css">
+                  <AnchorPane prefHeight="490.0" prefWidth="210.0" stylesheets="@CssTest.css">
                      <children>
                         <Button layoutX="16.0" layoutY="115.0" mnemonicParsing="false" onAction="#PengisianButtonAction" prefHeight="46.0" prefWidth="176.0" text="       Pengisian Formulir" />
                         <Label layoutX="-1.0" prefHeight="34.0" prefWidth="210.0" style="-fx-background-color: #6FCCE0;">
@@ -49,7 +49,10 @@
                               <Image url="@../Gambar/menu%20(2).png" />
                            </image>
                         </ImageView>
-                        <Button layoutX="16.0" layoutY="51.0" mnemonicParsing="false" onAction="#DashboardButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Dashboard     " textAlignment="CENTER" wrapText="true" />
+                        <Button layoutX="16.0" layoutY="51.0" mnemonicParsing="false" onAction="#DashboardButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Dashboard     " textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Lucida Sans Typewriter Regular" size="12.0" />
+                           </font></Button>
                         <Button layoutX="16.0" layoutY="184.0" mnemonicParsing="false" onAction="#BansosButtonAction" prefHeight="46.0" prefWidth="176.0" stylesheets="@CSSOWW.css" text="Pengajuan Bantuan Sosial" wrapText="true">
                            <graphic>
                               <HBox prefHeight="5.0" prefWidth="12.0">
