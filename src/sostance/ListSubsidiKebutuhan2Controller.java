@@ -255,7 +255,7 @@ public class ListSubsidiKebutuhan2Controller implements Initializable {
         data.add(new PieChart.Data("2014", 4250));
         pcSubsidiKebutuhan.setData(data);
 
-        cbAlamat.setValue("");
+        cbAlamat.setValue("Sleman");
         cbAlamat.getItems().addAll("Sleman", "Yogyakarta", "Bantul", "Kulon Progo");
 
         tcnamaBahan.setCellValueFactory(new PropertyValueFactory<>("nama"));

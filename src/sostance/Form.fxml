@@ -72,7 +72,6 @@
                                     <Font size="15.0" />
                                  </font>
                               </Text>
-                              <TextField fx:id="pekerjaan" layoutX="136.0" layoutY="147.0" prefHeight="25.0" prefWidth="201.0" />
                               <TextField fx:id="Alamat" layoutX="136.0" layoutY="218.0" prefHeight="25.0" prefWidth="201.0" />
                               <TextField fx:id="NIK" layoutX="136.0" layoutY="294.0" prefHeight="25.0" prefWidth="201.0" />
                               <TextField fx:id="KK" layoutX="136.0" layoutY="360.0" prefHeight="25.0" prefWidth="201.0" />
@@ -81,6 +80,7 @@
                               <Button fx:id="simpan" layoutX="251.0" layoutY="421.0" mnemonicParsing="false" onAction="#ButtonSimpan" prefHeight="25.0" prefWidth="73.0" text="Simpan" />
                               <Button fx:id="tampilkan" layoutX="14.0" layoutY="421.0" mnemonicParsing="false" onAction="#ButtonTampilkanData" text="Tampilkan" />
                               <ChoiceBox fx:id="Agama" layoutX="137.0" layoutY="99.0" prefHeight="25.0" prefWidth="200.0" />
+                              <ChoiceBox fx:id="pekerjaan" layoutX="137.0" layoutY="146.0" prefHeight="25.0" prefWidth="200.0" />
                            </children>
                         </Pane>
                      </children>

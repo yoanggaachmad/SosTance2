@@ -48,7 +48,7 @@ public class ListSubsidiKebutuhanController implements Initializable {
     private PieChart pcSubsidiKebutuhan;
     
     @FXML
-    private ChoiceBox cbalamat;
+    private ComboBox cbalamat;
 
     @FXML
     private Button kembali;
@@ -256,9 +256,9 @@ public class ListSubsidiKebutuhanController implements Initializable {
 
 //        // TODO
 //
-        tcnamaBahan.setCellValueFactory(new PropertyValueFactory<>("namaBahan"));
-        tcstok.setCellValueFactory(new PropertyValueFactory<>("stok"));
-        tcalamat.setCellValueFactory(new PropertyValueFactory<>("alamatPengambilan"));
+        tcnamaBahan.setCellValueFactory(new PropertyValueFactory<>("nama"));
+        tcstok.setCellValueFactory(new PropertyValueFactory<>("banyak"));
+        tcalamat.setCellValueFactory(new PropertyValueFactory<>("alamat"));
 
 //        data1 = new SubsidiKebutuhanList();
 //        data1.setDummy();

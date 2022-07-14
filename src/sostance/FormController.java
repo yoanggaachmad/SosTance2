@@ -65,7 +65,7 @@ public class FormController implements Initializable {
     private TextField KK;
     
     @FXML
-    private TextField pekerjaan;
+    private ChoiceBox pekerjaan;
     
     @FXML
     private Button simpan;
@@ -118,7 +118,7 @@ public class FormController implements Initializable {
         }else if(perm.isSelected()){
             tTipe = "Perempuan";
         }
-        pekerjaanm = pekerjaan.getText();
+        pekerjaanm = pekerjaan.getValue().toString();
         Agamam = Agama.getValue().toString();
         NamaLengkapm = NamaLengkap.getText();
         NIKm = NIK.getText();
@@ -163,6 +163,9 @@ public class FormController implements Initializable {
         
         Agama.setValue("Islam");
         Agama.getItems().addAll("Islam", "Kristen", "Katolik", "Hindu", "Buddha", "Konghucu");
+        
+        pekerjaan.setValue("Tidak Bekerja");
+        pekerjaan.getItems().addAll("Tidak Bekerja", "Petani", "Nelayan", "Buruh", "Swasta", "Lainnya");
     }    
     
 }
