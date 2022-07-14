@@ -23,7 +23,7 @@
                <children>
                   <VBox prefHeight="549.0" prefWidth="326.0">
                      <children>
-                        <Label text="Formulir" underline="true">
+                        <Label text="FORMULIR" underline="true">
                            <VBox.margin>
                               <Insets left="140.0" top="10.0" />
                            </VBox.margin>

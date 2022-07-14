@@ -26,14 +26,14 @@
                   </ImageView>
                   <Label layoutX="26.0" layoutY="463.0" textFill="WHITE" />
                   <Label layoutX="20.0" layoutY="423.0" text="*Daftar list kebutuhan subsidi dapat dilihat di atas" textFill="WHITE" />
-                  <Label layoutX="167.0" layoutY="14.0" prefHeight="54.0" prefWidth="416.0" style="-fx-background-color: #6FCCE0;" text=" List Kebutuhan Subsidi" textAlignment="CENTER" textFill="WHITE">
+                  <Label layoutX="182.0" layoutY="21.0" prefHeight="42.0" prefWidth="341.0" style="-fx-background-color: #6FCCE0; -fx-background-radius: 50;" text="  LIST KEBUTUHAN SUBSIDI" textAlignment="CENTER" textFill="WHITE">
                      <font>
-                        <Font name="System Bold" size="37.0" />
+                        <Font name="System Bold" size="25.0" />
                      </font>
                   </Label>
                   <Label layoutX="20.0" layoutY="80.0" text="Cek Pengambilan Subsidi Terdekat :" textFill="WHITE" />
                   <PieChart fx:id="pcSubsidiKebutuhan" layoutX="399.0" layoutY="153.0" prefHeight="251.0" prefWidth="265.0" />
-                  <TableView fx:id="tvlistKebutuhanSubsidi" layoutX="20.0" layoutY="141.0" prefHeight="275.0" prefWidth="355.0">
+                  <TableView fx:id="tvlistKebutuhanSubsidi" layoutX="20.0" layoutY="141.0" prefHeight="275.0" prefWidth="355.0" style="-fx-border-color: #6FCCE0;">
                     <columns>
                       <TableColumn fx:id="tcnamaBahan" prefWidth="105.59997367858887" text="Nama Bahan" />
                       <TableColumn fx:id="tcalamat" prefWidth="187.20001983642578" text="Alamat" />
