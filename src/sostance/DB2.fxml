@@ -23,10 +23,13 @@
                      <children>
                         <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="712.0" style="-fx-background-color: #D1F2F2;">
                            <children>
-                              <Label prefHeight="24.0" prefWidth="487.0" text="Selamat Datang di SosTance! Silahkan pilih menu dengan menekan tombol di sebelah kiri.">
+                              <Label prefHeight="24.0" prefWidth="554.0" text="Selamat Datang di SosTance! Silahkan pilih menu dengan menekan tombol di sebelah kiri.">
                                  <HBox.margin>
                                     <Insets left="2.0" />
                                  </HBox.margin>
+                                 <font>
+                                    <Font name="Times New Roman" size="15.0" />
+                                 </font>
                               </Label>
                            </children>
                         </HBox>

@@ -6,15 +6,21 @@ package sostance;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
 /**
  *
@@ -26,11 +32,15 @@ public class DashBoardController implements Initializable {
     BorderPane mainPane;
 
     @FXML
+    private AnchorPane ap;
+
+    @FXML
     private void DashboardButtonAction(ActionEvent event) {
         OpenScene object = new OpenScene();
         Pane halaman = object.getPane("DB2");
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
+
     }
 
     @FXML
@@ -63,44 +73,6 @@ public class DashBoardController implements Initializable {
         Pane halaman = object.getPane("ListSubsidiKebutuhan");
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
-
-//    @FXML
-//        void ListSubsidiKebutuhan(ActionEvent event) throws IOException {
-//        Pane pane = FXMLLoader.load(ListSubsidiKebutuhanController.class.getResource("ListSubsidiKebutuhan.fxml"));
-////        Pane halaman = bukaScene.getPane("/View/Postingan");
-//        mainPane.setCenter(pane);
-//        System.out.println("Button list subsidi's Clicked");
-//    }
-    }
-
-    @FXML
-    private void ListButtonAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    private void penyediaanButtonAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    private void FormulirAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    private void DashboardPengajuanAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    private void DashboardListAction(ActionEvent event) {
-
-    }
-
-    @FXML
-    private void DashboardmodalAction(ActionEvent event) {
-
     }
 
     @FXML
@@ -109,6 +81,29 @@ public class DashBoardController implements Initializable {
         Pane halaman = object.getPane("ModalTempatUsaha");
         mainPane.setCenter(halaman);
         mainPane.requestFocus();
+    }
+
+    @FXML
+    private void close(ActionEvent event) {
+        Stage stage = (Stage) ap.getScene().getWindow();
+
+        Alert.AlertType type = Alert.AlertType.CONFIRMATION;
+        Alert alert = new Alert(type, "");
+        alert.setTitle("Pemberitahuan !");
+
+        alert.initModality(Modality.APPLICATION_MODAL);
+        alert.initOwner(stage);
+        alert.getDialogPane().setContentText("Tekan Ok untuk keluar/Cancel untuk membatalkan");
+        alert.getDialogPane().setHeaderText("Anda yakin ingin keluar dari aplikasi ini?");
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK) {
+            Platform.exit();
+            System.out.println("Anda berhasil keluar aplikasi");
+            
+        } else if (result.get() == ButtonType.CANCEL) {
+            System.out.println("Batal keluar aplikasi");
+        }
     }
 
     @Override

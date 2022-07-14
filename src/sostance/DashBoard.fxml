@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
+<AnchorPane id="AnchorPane" fx:id="ap" prefHeight="601.0" prefWidth="915.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sostance.DashBoardController">
     <children>
       <BorderPane fx:id="mainPane" prefHeight="602.0" prefWidth="915.0">
          <left>
@@ -110,6 +110,12 @@
                               </ImageView>
                            </children>
                         </HBox>
+                        <Button layoutX="13.0" layoutY="393.0" mnemonicParsing="false" onAction="#close" prefHeight="35.0" prefWidth="31.0" />
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="19.0" layoutY="400.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Gambar/exit.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
                </children>
@@ -141,10 +147,13 @@
                <children>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="712.0" style="-fx-background-color: #D1F2F2;">
                      <children>
-                        <Label prefHeight="24.0" prefWidth="487.0" text="Selamat Datang di SosTance! Silahkan pilih menu dengan menekan tombol di sebelah kiri.">
+                        <Label prefHeight="24.0" prefWidth="551.0" text="Selamat Datang di SosTance! Silahkan pilih menu dengan menekan tombol di sebelah kiri.">
                            <HBox.margin>
                               <Insets left="2.0" />
-                           </HBox.margin></Label>
+                           </HBox.margin>
+                           <font>
+                              <Font name="Times New Roman" size="15.0" />
+                           </font></Label>
                      </children>
                   </HBox>
                   <HBox prefHeight="515.0" prefWidth="714.0">

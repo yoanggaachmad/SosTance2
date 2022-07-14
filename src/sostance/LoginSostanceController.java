@@ -70,6 +70,7 @@ public class LoginSostanceController implements Initializable {
             window.setScene(tableViewScene);
             window.show();
             
+            
             String xml = xstream.toXML(dataRegistrasi);
             FileOutputStream berkasBaru = null;
             try {
@@ -109,6 +110,7 @@ public class LoginSostanceController implements Initializable {
         stage.setScene(new Scene(scene2));
         stage.show();
         stage.setTitle("Buat Akun");
+        
     }
     
     XStream xstream = new XStream(new StaxDriver());
